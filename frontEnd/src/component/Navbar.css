@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.leftSide h2{
+    text-transform: capitalize;
+}
+.navbar{
+    width: 900px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    background-image: lighten(black,20%);
+}
+li{
+    font-family: sans-serif;
+    display: inline;
+    margin: 5px;
+    list-style-type: none;
+    color:green;
+    font-size: 20px;
+    cursor: pointer;
+}
