@@ -1,0 +1,40 @@
+ @import url('https://fonts.googleapis.com/css2?family=Lato:ital@1&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    background-image: url('../assest/Firstpage.jpeg');
+    height: 100vh;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid red;
+    width: 900px;
+    margin: 0 auto;
+    position: relative;
+    top: 10px;
+    padding: 10px;
+}
+.left h2{
+    font-size: 36px;
+    color: green;
+    font-family: 'Lato', sans-serif;
+    letter-spacing: 2px;
+}
+
+.navbar li{
+    display: inline;
+    padding: 5px;
+    cursor: pointer;
+    background-color:#ccd5ae;
+    margin: 1px;
+    border-radius: 5px;
+    font-size: 20px;
+    transition: 0.7s;
+}
+.navbar li:hover{
+    background-color: black;
+    color: #ffff;
+}
