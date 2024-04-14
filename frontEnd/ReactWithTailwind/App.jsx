@@ -8,6 +8,7 @@ import SummerVegetable from "./pages/SummerVegetable";
 import SummerFruits from "./pages/SummerFruits";
 import SummerFlower from "./pages/SummerFlower";
 import SummerVeg from "./pages/SummerVeg";
+import ShowSummerFruit from "./pages/ShowSummerFruit";
 export default function App() {
   return (
     <>
@@ -16,9 +17,21 @@ export default function App() {
           <Route path="/" element={<Home />} />
         </Route>
         <Route path="/summer" element={<Summer />} />
-        <Route  element={<SummerLayout />} >
-          <Route path="/summer/vegetable" element={<SummerVegetable/>}/>
-          <Route path="/summer/vegetable/:vegetableName" element={<SummerVeg/>}/>
+        <Route element={<SummerLayout header="Vegetable" />}>
+          <Route path="/summer/vegetable" element={<SummerVegetable />} />
+          <Route
+            path="/summer/vegetable/:vegetableName"
+            element={<SummerVeg />}
+          />
+        </Route>
+
+        <Route path="/summer" element={<SummerFruits />} />
+        <Route element={<SummerLayout header="fruit" />}>
+          <Route path="/summer/fruit" element={<SummerFruits />} />
+          <Route
+            path="/summer/fruit/:fruitName"
+            element={<ShowSummerFruit />}
+          />
         </Route>
         {/* <Route path="/summer/fruit" element={<SummerFruits />} />
         <Route path="/summer/flower" element={<SummerFlower />} /> */}

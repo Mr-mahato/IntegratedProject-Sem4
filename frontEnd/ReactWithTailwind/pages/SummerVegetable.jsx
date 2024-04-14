@@ -41,7 +41,7 @@ export default function SummerVegetable() {
   return (
     <div className="summerVegeContainer relative">
       <div
-        className="absolute top-0 w-full h-[500px]  flex rounded-md items-center justify-center "
+        className="relative top-0 w-full h-[500px]  flex rounded-md items-center justify-center "
         style={{
           backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)),url('https://friscofreshmarket.com/wp-content/uploads/2022/06/ways-to-make-summer-vegetables-appealing.jpg`,
           backgroundSize: "cover",
@@ -55,7 +55,7 @@ export default function SummerVegetable() {
           />
         </div>
       </div>
-      <div className="vegContainer my-1/2 absolute z-20 top-[500px] flex flex-wrap gap-10 justify-center">
+      <div className="vegContainer  my-1/2 absolute z-20 top-[500px] flex flex-wrap gap-10 justify-center">
         {vegeElem}
       </div>
     </div>
