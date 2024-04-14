@@ -8,17 +8,41 @@ app.get("/api/intro", (req, res) => {
 });
 
 app.get('/api/summerVegetable',(req,res)=>{
-    fs.readFile('SummerPlants.json','utf-8' , (err,data)=>{
+	fs.readFile('SummerVegetable.json','utf-8' , (err,data)=>{
         if(err) res.send('Internal server error');
         data = JSON.parse(data);
         res.send(data);
     })
 })
 
-app.get('/',(req,res)=>{
-  res.send('hello you did hit this endpoint');
+app.get('/api/summerFruit',(req,res)=>{
+	fs.readFile('SummerFruit.json','utf-8' , (err,data)=>{
+        if(err) res.send('Internal server error');
+        data = JSON.parse(data);
+        res.send(data);
+    })
 })
 
+app.get('/api/fruit/:fruitName',(req,res)=>{
+	const {fruitName}  = req.params;
+  fs.readFile('SummerFruit.json' , 'utf-8' , (err,data)=>{
+    if(err) res.send('internal server error');
+    data = JSON.parse(data);
+    data = data.filter(val => val.name == fruitName);
+    res.send(data);
+  })
+})
+
+app.get('/api/vegetable/:vegName',(req,res)=>{
+	const {vegName}  = req.params;
+	console.log(vegName);
+  fs.readFile('SummerVegetable.json' , 'utf-8' , (err,data)=>{
+    if(err) res.send('internal server error');
+    data = JSON.parse(data);
+    data = data.filter(val => val.name == vegName);
+    res.send(data);
+  })
+})
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
