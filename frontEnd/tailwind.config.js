@@ -2,7 +2,11 @@
 export default {
   content: ["./index.html", "./ReactWithTailwind/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'navColor': 'rgb(62 79 68)',
+      },
+    },
   },
   plugins: [],
 };

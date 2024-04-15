@@ -2,23 +2,49 @@ import React from "react";
 import { Link } from "react-router-dom";
 function Summer() {
   return (
-    <div className="container h-screen max-w-full">
+    <div className="h-screen relative w-full">
       <div
-        className="h-2/3 border border-black"
+        className="h-full"
         style={{
-          backgroundImage: `url(https://plus.unsplash.com/premium_photo-1661757549432-446331f0fd6c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8c3VtbWVyJTIwRmFybWluZ3xlbnwwfHwwfHx8MA%3D%3D)`,
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)) ,url(https://extension.okstate.edu/articles/images/fall_gardening_banner.jpg)`,
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
       >
-        {/* <nav className="flex justify-between w-full">
-          <div className="left bg-blue-400 flex-1">
-            <h1>Agroguide</h1>
+        <nav className="flex items-center justify-between p-5 ">
+          <div>
+            <Link to={'/'} className="text-white text-2xl  font-bold">
+            Agroguide
+            </Link>
           </div>
-          <div className="right flex-1 bg-gray-400">Vegetable</div>
-        </nav> */}
+          <div>
+            <a href="/vegetables" className="text-white mx-2">
+              About US
+            </a>
+            <a href="/fruits" className="text-white mx-2">
+              Recommendations
+            </a>
+            <a href="/farming-tips" className="text-white mx-2">
+              Farming Tips
+            </a>
+          </div>
+        </nav>
+        {/* this div is having the text to be left part of the screen */}
+        <div className="absolute top-1/2 w-1/3 left-10 ">
+          <div>
+            <h1 className="text-4xl font-bold text-white ">
+              Summer Produce Guide
+            </h1>
+            <p className="text-3xl my-5 text-gray-200">
+              Discover the best vegetables, fruits, and flowers to grow this
+              summer
+            </p>
+          </div>
+        </div>
       </div>
+
+      {/* next component started */}
       <h1 className="text-2xl text-center">
         With Farming you can have better health
       </h1>
