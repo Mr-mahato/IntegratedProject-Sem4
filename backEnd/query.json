@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "query": "What is the best time to plant tomatoes?",
+    "category": "vegetable",
+    "resolvedAns": "Its in summer.",
+    "status": "resolved",
+    "resolvedBy": "tina"
+  },
+  {
+    "id": 2,
+    "query": "How much water does lettuce need?",
+    "category": "vegetable",
+    "resolvedAns": "It require 2ltr of water.",
+    "status": "resolved",
+    "resolvedBy": "tina"
+  },
+  {
+    "id": 3,
+    "query": "What type of soil is best for carrots?",
+    "category": "vegetable",
+    "resolvedAns": "Moist soil is best.",
+    "status": "resolved",
+    "resolvedBy": "mossy"
+  },
+  {
+    "id": 4,
+    "query": "How to control pests on my cucumber plants?",
+    "category": "vegetable",
+    "resolvedAns": "You have to keep your eyes on .",
+    "status": "resolved",
+    "resolvedBy": "Adi"
+  },
+  {
+    "id": 5,
+    "query": "Why are my bell peppers turning yellow?",
+    "category": "vegetable",
+    "resolvedAns": "jflkasdjkf",
+    "status": "resolved",
+    "resolvedBy": "Adi"
+  },
+  {
+    "title": "How to add bwater in plant.",
+    "description": "How can we add water to the plants so that its should get dry.",
+    "id": 97
+  }
+]
