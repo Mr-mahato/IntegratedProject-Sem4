@@ -1,7 +1,9 @@
 import React , {useEffect , useState} from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import Query from "./Query";
 export default function ShowSummerFlower() {
+  const [isOpen, setisOpen] = useState(false);
   const { flowerName } = useParams();
   const [flower , setParticularFlower] = useState({});
 
@@ -56,6 +58,13 @@ export default function ShowSummerFlower() {
         </div>
 
       </div>
+      <button
+          onClick={() => setisOpen(!isOpen)}
+          className="text-2xl sticky right-0 bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
+        >
+          {isOpen? "Close Query" : "Ask Query"}
+        </button>
+        {isOpen && <Query />}
 
       </div>
     </div>

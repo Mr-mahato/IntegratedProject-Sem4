@@ -17,31 +17,32 @@ export default function SummerVegetable() {
   }, []);
 
   const vegeElem = vegetable.map((val) => {
-    console.log(val);
     return (
-      
-      <Link to={`/summer/vegetable/${val.name}`}>
-      <div
-        key={val.name}
-        className="max-w-md rounded-lg cursor-pointer shadow-md bg-white p-4"
-      >
-        <img
-          src={val.imageUrl}
-          alt="This is the vegetable "
-          className="w-full h-48 object-cover rounded-t-lg transition hover:scale-110 duration-300 ease-in-out"
-        />
-        <div className="p-2">
-          <h1 className="text-2xl  font-bold">{val.name}</h1>
-        </div>
+      <div>
+        <Link to={`/summer/vegetable/${val.name}`}>
+         
+            <div
+              key={val.name}
+              className=" my-4 rounded-lg cursor-pointer shadow-lg bg-white p-4 transition-transform duration-500 ease-in-out hover:scale-105"
+            >
+              <img
+                src={val.imageUrl}
+                alt="This is the vegetable "
+                className="w-full h-48 object-cover rounded-t-lg transition-transform duration-300 ease-in-out hover:scale-110"
+              />
+              <div className="p-2">
+                <h1 className="text-2xl font-bold text-gray-800">{val.name}</h1>
+              </div>
+            </div>
+        </Link>
       </div>
-      </Link>
     );
   });
 
   return (
-    <div className="summerVegeContainer relative">
+    <div className="summerVegeContainer w-full h-screen absolute top-0">
       <div
-        className="relative top-0 w-full h-[500px]  flex rounded-md items-center justify-center "
+        className="w-full h-full  flex rounded-md items-center justify-center "
         style={{
           backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)),url('https://friscofreshmarket.com/wp-content/uploads/2022/06/ways-to-make-summer-vegetables-appealing.jpg`,
           backgroundSize: "cover",
@@ -55,7 +56,7 @@ export default function SummerVegetable() {
           />
         </div>
       </div>
-      <div className="vegContainer  my-1/2 absolute z-20 top-[500px] flex flex-wrap gap-10 justify-center">
+      <div className="vegContainer  mt-20 flex flex-wrap gap-8 justify-center">
         {vegeElem}
       </div>
     </div>

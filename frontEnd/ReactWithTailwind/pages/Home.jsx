@@ -1,30 +1,94 @@
-import "../style.css";
-// import homeImage from "../assest/Firstpage.jpeg";
+import { useContext, useEffect, useState } from "react";
+import { SessionContext } from "../context/Session";
+import { useNavigate, Link } from "react-router-dom";
 export default function Home() {
   return (
-    <div className="container  max-w-full">
-      <div className="">
-        <div className="h-full object-contain bg-black/50">
-          <img
-            className="max-h-[644px] w-full bg-cover "
-            src="https://images.unsplash.com/photo-1563201515-adbe35c669c5?q=80&w=1474&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            alt="This is the farmer field"
-          />
-        </div>
+    <div className="container absolute top-0 max-w-full">
+      <div className="h-screen  ">
+        <div
+          className="h-full"
+          style={{
+            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)) ,url(https://extension.okstate.edu/articles/images/fall_gardening_banner.jpg)`,
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        ></div>
 
-        <div className="w-1/2  absolute lg:bottom-3 md:bottom-2 bottom-1/4 md:p-5 p-8 m flex flex-col items-start">
-          <h1 className="lg:text-4xl md:text-2xl text-xl font-bold  text-white/90">
+        <div className="w-1/2 absolute top-[13%]   p-8  flex flex-col items-start">
+          <h1 className="text-3xl  font-bold  text-white">
             Assisting in cultivating plants at home for a greener environment
             and access to healthy food.
           </h1>
-          <button className="mt-4 bg-white/85 p-4 rounded font-medium">
-            Learn More
+          <button className="mt-4 bg-red-700 hover:bg-red-500 text-white p-4 rounded font-medium">
+            Get Started
           </button>
         </div>
       </div>
 
+      <div className="season-view grid grid-rows-1 grid-cols-3 justify-stretch mt-10 m-2 p-5">
+        {/* image ->> Summer section */}
+        <Link to={'/summer'}>
+        <div className="border h-full mx-2 rounded-md cursor-pointer overflow-hidden shadow-lg transform transition-all duration-500 hover:scale-105">
+          <img
+            src={
+              "https://images.pexels.com/photos/19168813/pexels-photo-19168813/free-photo-of-view-of-a-combine-harvester-on-a-cropland.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            }
+            alt="this is summer"
+            className="w-full h-64 object-cover"
+          />
+          <div className="p-4">
+            <h1 className="text-2xl font-bold">Summer </h1>
+            <p className="mt-2 text-lg text-gray-700">
+              This is the perfect time to grow heat-loving plants like tomatoes,
+              peppers, and zucchini.
+            </p>
+          </div>
+        </div>
+        </Link>
+
+
+        {/* image ->> winter section */}
+
+        <div className="border mx-2 rounded-md cursor-pointer overflow-hidden shadow-lg transform transition-all duration-500 hover:scale-105">
+          <img
+            src={
+              "https://images.pexels.com/photos/3624830/pexels-photo-3624830.jpeg"
+            }
+            alt="this is winter"
+            className="w-full h-64 object-cover"
+          />
+          <div className="p-4">
+            <h1 className="text-2xl font-bold">Winter</h1>
+            <p className="mt-2 text-lg text-gray-700">
+              Winter is a great time for cool-season crops like broccoli,
+              lettuce, and kale. It's also a good time to plan for the spring.
+            </p>
+          </div>
+        </div>
+
+        {/* image ->> Rainy section */}
+        <div className="border h-full mx-2 rounded-md cursor-pointer overflow-hidden shadow-lg transform transition-all duration-500 hover:scale-105">
+          <img
+            src={
+              "https://images.pexels.com/photos/19136192/pexels-photo-19136192/free-photo-of-back-view-of-a-man-walking-on-a-rice-field.jpeg"
+            }
+            alt="this is Rainy"
+            className="w-full h-64 object-cover"
+          />
+          <div className="p-4">
+            <h1 className="text-2xl font-bold">Rainy Season</h1>
+            <p className="mt-2 text-lg text-gray-700">
+              The rainy season is ideal for water-loving plants like rice, taro,
+              and lotus. It's also a good time to prepare for the upcoming dry
+              season.
+            </p>
+          </div>
+        </div>
+      </div>
+
       {/* image ->> below section */}
-      <section id="mission" className="subchild flex p-10 gap-10">
+      <section id="mission" className="subchild mt-20 flex p-10 gap-10">
         <h1 className="text-4xl font-medium">
           Grow Your Own Oasis Transform Your Space with Greenery Freshness
           Starts at Home
@@ -37,7 +101,7 @@ export default function Home() {
         </p>
       </section>
 
-      <section id="explore" className="summer flex p-10 mt-10  gap-10">
+      <section id="explore" className="summer flex p-10 mt-20  gap-10">
         <div className="left  mt-10 p-2">
           <h1 className="text-3xl font-medium">
             Maximize Your Harvest: Essential Summer Fruits & Vegetables -
@@ -61,7 +125,7 @@ export default function Home() {
 
       {/* lets write something for winter */}
 
-      <section className="winter flex p-10 mt-10  gap-10">
+      <section className="winter flex p-10 mt-20  gap-10">
         <img
           className="w-1/2 rounded"
           src={`https://wintergreenfarmblog.files.wordpress.com/2020/11/2020-csa-week-24.jpg`}

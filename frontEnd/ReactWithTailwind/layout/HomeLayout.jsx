@@ -7,7 +7,7 @@ export default function HomeLayout() {
     <>
     <Header/>
     <Outlet/>
-    <Footer/>
+    {/* <Footer/> */}
     </>
   )
 }

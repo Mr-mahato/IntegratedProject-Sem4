@@ -1,9 +1,11 @@
 import React , {useEffect , useState} from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import Query from "./Query";
 export default function SummerVeg() {
   const { vegetableName } = useParams();
   const [vegetable , setParticularVegetable] = useState({});
+  const [isOpen, setisOpen] = useState(false);
 
   useEffect(() => {
     const getVegetable = async () => {
@@ -60,6 +62,13 @@ export default function SummerVeg() {
         </div>
 
       </div>
+      <button
+          onClick={() => setisOpen(!isOpen)}
+          className="text-2xl sticky right-0 bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
+        >
+          {isOpen? "Close Query" : "Ask Query"}
+        </button>
+        {isOpen && <Query />}
 
       </div>
     </div>

@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 function Summer() {
   return (
-    <div className="h-screen relative w-full">
+    <div className="h-screen absolute top-0 w-full">
       <div
         className="h-full"
         style={{
@@ -12,24 +12,7 @@ function Summer() {
           backgroundPosition: "center",
         }}
       >
-        <nav className="flex items-center justify-between p-5 ">
-          <div>
-            <Link to={'/'} className="text-white text-2xl  font-bold">
-            Agroguide
-            </Link>
-          </div>
-          <div>
-            <a href="/vegetables" className="text-white mx-2">
-              About US
-            </a>
-            <a href="/fruits" className="text-white mx-2">
-              Recommendations
-            </a>
-            <a href="/farming-tips" className="text-white mx-2">
-              Farming Tips
-            </a>
-          </div>
-        </nav>
+        
         {/* this div is having the text to be left part of the screen */}
         <div className="absolute top-1/2 w-1/3 left-10 ">
           <div>

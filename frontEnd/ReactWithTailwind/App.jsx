@@ -10,39 +10,43 @@ import SummerFlower from "./pages/SummerFlower";
 import SummerVeg from "./pages/SummerVeg";
 import ShowSummerFruit from "./pages/ShowSummerFruit";
 import ShowSummerFlower from "./pages/ShowSummerFlower";
+import Signup from "./pages/Signup";
+import Login from "./pages/Login";
+import { SessionProvider } from "./context/Session";
+import Error from "./pages/Error";
+import Profile from "./pages/Profile";
+import Query from "./pages/Query";
+import ResolvedQuery from "./pages/ResolvedQuery";
 export default function App() {
   return (
     <>
-      <Routes>
-        <Route path="/" element={<HomeLayout />}>
-          <Route path="/" element={<Home />} />
-        </Route>
-        <Route path="/summer" element={<Summer />} />
-        {/* this is the vegetable part */}
-        <Route element={<SummerLayout header="Vegetable" />}>
-          <Route path="/summer/vegetable" element={<SummerVegetable />} />
-          <Route
-            path="/summer/vegetable/:vegetableName"
-            element={<SummerVeg />}
-          />
-        </Route>
+      <SessionProvider>
+        <Routes>
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/" element={<HomeLayout />}>
+            <Route path="/" element={<Home />} />
+            <Route path="/profile" element={<Profile />} />
+          </Route>
 
-        {/* this is the fruit part */}
-        <Route element={<SummerLayout header="fruit" />}>
-          <Route path="/summer/fruit" element={<SummerFruits />} />
-          <Route
-            path="/summer/fruit/:fruitName"
-            element={<ShowSummerFruit />}
-          />
-        </Route>
-        <Route element={<SummerLayout header="flower" />}>
-          <Route path="/summer/flower" element={<SummerFlower />} />
-          <Route
-            path="/summer/flower/:flowerName"
-            element={<ShowSummerFlower />}
-          />
-        </Route>
-      </Routes>
+          <Route path="/summer" element={<SummerLayout />}>
+            <Route path="/summer" element={<Summer/>}/>
+            <Route path="/summer/vegetable" element={<SummerVegetable header='vegetable'/>} />
+            {/* this will show the vegetable */}
+            <Route path="/summer/vegetable/:vegetableName" element={<SummerVeg/>} />
+            <Route path="/summer/fruit" element={<SummerFruits/>} />
+            {/* this will show the fruit */}
+            <Route path="/summer/fruit/:fruitName" element={<ShowSummerFruit/>} />
+
+            <Route path="/summer/flower" element={<SummerFlower/>} />
+            {/* this will show the flower */}
+            <Route path="/summer/flower/:flowerName" element={<ShowSummerFlower/>} />
+          </Route>
+          <Route path="/query" element={<Query />} />
+          <Route path="/resolvedQuery" element={<ResolvedQuery />} />
+          <Route path="*" element={<Error/>}/>
+        </Routes>
+      </SessionProvider>
     </>
   );
 }
