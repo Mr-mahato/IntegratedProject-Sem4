@@ -26,7 +26,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="season-view grid grid-rows-1 grid-cols-3 justify-stretch mt-10 m-2 p-5">
+      <div className="season-view grid grid-rows-1 grid-cols-3  mt-10 m-2 p-5">
         {/* image ->> Summer section */}
         <Link to={'/summer'}>
         <div className="border h-full mx-2 rounded-md cursor-pointer overflow-hidden shadow-lg transform transition-all duration-500 hover:scale-105">

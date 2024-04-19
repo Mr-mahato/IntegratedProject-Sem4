@@ -126,18 +126,16 @@ export default function Profile() {
       return (
         <div
           key={q.id}
-          className="flex justify-between items-center  p-2 border-b"
+          className="flex flex-col gap-2 bg-white p-5  rounded-lg shadow-lg "
         >
-          <div className="flex gap-10">
-            <p>{q.category}</p>
-            <p>{q.query}</p>
-          </div>
+            <p>{q.title}</p>
+            <p className="text-gray-600 ">{q.description}</p>
           <button
             onClick={() => {
               setActiveQueryForm(activeQueryForm === q.id ? null : q.id);
               setQueryAsked(q.query);
             }}
-            className={`bg-blue-400 px-4 py-2 rounded text-white ${
+            className={`bg-blue-600 hover:bg-blue-500 py-2 w-40 rounded text-white ${
               q.status === "resolved" ? "opacity-50 cursor-not-allowed" : ""
             }`}
             disabled={q.status === "resolved"}
@@ -155,8 +153,8 @@ export default function Profile() {
   }, []);
 
   return (
-    <div className="flex py-20 ">
-      <aside className="w-64 bg-gray-200 h-[400px] p-4">
+    <div className="grid grid-cols-4 min-h-screen py-24  bg-[#f1f1f1fe]">
+      <aside className="self-start sticky top-3 col-span-0 bg-gray-200 p-4">
         <ul>
           {session.role == 1 && (
             <>
@@ -195,12 +193,12 @@ export default function Profile() {
         </ul>
       </aside>
 
-      <main className="flex-grow p-4">
+      <main className="p-4 col-span-3   ">
         {session.role ==1 && selectedOption === "posts" && (
           <form className="flex flex-col space-y-4">
             <label className="flex flex-col">
               Plant Type:
-              <select className="mt-1 p-2 border rounded">
+              <select className="mt-1 p-2 border w-40 rounded">
                 <option value="vegetable">Vegetable</option>
                 <option value="flower">Flower</option>
                 <option value="fruit">Fruit</option>
@@ -299,7 +297,7 @@ export default function Profile() {
         )}
 
         {selectedOption === "queries" && (
-          <div>
+          <div className="flex flex-col gap-4">
             {activeQueryForm && (
               <div className="flex flex-col gap-1">
                 <form className="flex flex-col ">

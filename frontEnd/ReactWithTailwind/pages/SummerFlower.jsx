@@ -3,7 +3,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 export default function SummerFlower() {
   const [flower, setFlower] = useState([]);
-
+  const [searchField , setSearchField] = useState('');
   useEffect(() => {
     const getFlower = async () => {
       try {
@@ -16,7 +16,14 @@ export default function SummerFlower() {
     getFlower();
   }, []);
 
-  const flowElem = flower.map((val) => {
+  const flowElem = flower
+  .filter((item) => {
+    if (!searchField) return true;
+    if (item.name.toLowerCase().includes(searchField.toLowerCase())) {
+      return true;
+    }
+    return false;
+  }).map((val) => {
     return (
       <Link to={`/summer/flower/${val.name}`}>
       <div
@@ -45,9 +52,11 @@ export default function SummerFlower() {
           backgroundSize: "cover",
         }}
       >
-        <div className="w-1/2 p-4 flex justify-center rounded-md ">
+        <div className="w-1/2 mt-20 p-4 flex justify-center rounded-md ">
           <input
             type="text"
+            value={searchField}
+            onChange={(e)=>setSearchField(e.target.value)}
             placeholder="Enter the Flower of which aroma you want"
             className="w-2/3  px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:border-blue-500"
           />

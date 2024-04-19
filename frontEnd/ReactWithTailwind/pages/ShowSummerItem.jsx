@@ -1,16 +1,20 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState , useContext } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import Query from "./Query";
-export default function ShowSummerFruit() {
-  const { fruitName } = useParams();
+import { SessionContext } from "../context/Session";
+export default function ShowSummerItem({fn , FN}) {
+  const {session} = useContext(SessionContext);
+  let name = useParams();
+  name = name[`${FN}`];
   const [fruits, setParticularFruits] = useState({});
   const [isOpen, setisOpen] = useState(false);
 
   useEffect(() => {
     const getVegetable = async () => {
       try {
-        const summerVegi = await axios.get(`/api/fruit/${fruitName}`);
+        const summerVegi = await axios.get(`/api/${fn}/${name}`);
+        console.log(summerVegi.data[0]);
         setParticularFruits(summerVegi.data[0]);
       } catch (error) {
         console.log(error);
@@ -19,19 +23,27 @@ export default function ShowSummerFruit() {
     getVegetable();
   }, []);
 
+  const handelQuery = ()=>{
+    console.log(session);
+    if(!session)
+    {
+      return alert('please logged in');
+    }
+    setisOpen(!isOpen);
+  }
+
   return (
-    <div className="h-full relative w-full  p-10 ">
-      <div className="gap-4 h-full relative border border-gray-200 p-4 rounded-lg">
+    <div className="h-full relative w-full  bg-[#f1f1f1]  ">
+      <div className=" relative border bg-white border-gray-200  rounded-lg">
         <div className="relative">
           <img
             src={fruits.imageUrl}
             alt={fruits.name}
-            className="w-full h-[20rem]  object-cover rounded-md"
+            className="w-full h-[20rem]  object-cover"
           />
-          <h1 className="absolute top-0">WaterMelon</h1>
         </div>
 
-        <div className="content-section">
+        <div className="content-section p-10 w-3/4  shadow-lg mx-auto mb-20">
           <h1 className="text-2xl font-bold">{fruits.name}</h1>
           <p className="mb-4">{fruits.description}</p>{" "}
           {/* Updated for description */}
@@ -63,14 +75,15 @@ export default function ShowSummerFruit() {
             <h2 className="text-xl font-semibold mb-2">Watering</h2>
             <p>{fruits.water}</p>
           </div>
-        </div>
-        <button
-          onClick={() => setisOpen(!isOpen)}
+          <button
+          onClick={handelQuery}
           className="text-2xl sticky right-0 bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
         >
           {isOpen? "Close Query" : "Ask Query"}
         </button>
         {isOpen && <Query />}
+        </div>
+       
       </div>
     </div>
   );

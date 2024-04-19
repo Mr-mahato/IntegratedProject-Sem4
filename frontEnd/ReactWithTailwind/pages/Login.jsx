@@ -4,7 +4,7 @@ import axios from "axios";
 
 import { SessionContext } from "../context/Session";
 export default function Login() {
-  const {session , setSession} = useContext(SessionContext);
+  const { session, setSession } = useContext(SessionContext);
   const Navigate = useNavigate();
   const [form, setForm] = useState({
     email: "",
@@ -18,23 +18,21 @@ export default function Login() {
     });
   };
 
-  const handelLogin = async()=>{
-      try {
-        let resp = await axios.post("/api/login", form);
-        resp  = resp.data
-        if(resp.status)
-        {
-          setSession({username:resp.username, role:resp.role})
-          Navigate('/')
-        }
-        else{
-         alert('bad credential'); 
-        }
-      } catch (error) {
-          alert('server error');
-          console.log(error)
+  const handelLogin = async () => {
+    try {
+      let resp = await axios.post("/api/login", form);
+      resp = resp.data;
+      if (resp.status) {
+        setSession({ username: resp.username, role: resp.role });
+        Navigate("/");
+      } else {
+        alert("bad credential");
       }
-  }
+    } catch (error) {
+      alert("server error");
+      console.log(error);
+    }
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -43,13 +41,20 @@ export default function Login() {
   };
 
   return (
-    <div className="container mx-auto px-4 pt-8">
-      <div className="bg-white rounded-lg shadow-md p-6 max-w-sm mx-auto">
+    <div
+      className="h-screen flex justify-center flex-col items-end px-20 bg-cover"
+      style={{
+        backgroundImage: `url(https://images.pexels.com/photos/1172675/pexels-photo-1172675.jpeg)`,
+      }}
+    >
+      <div className="bg-white p-6 rounded-lg w-1/3 ">
         <h2 className="text-2xl font-bold mb-4 text-center">Login</h2>
         <form onSubmit={handleSubmit}>
           <div className="mb-4">
-            
-            <label className="block text-gray-700 font-medium mb-2" htmlFor="username">
+            <label
+              className="block text-gray-700 font-medium mb-2"
+              htmlFor="username"
+            >
               Email:
             </label>
             <input
@@ -60,7 +65,10 @@ export default function Login() {
               onChange={handleChange}
               required
             />
-            <label className="block text-gray-700 font-medium mb-2" htmlFor="username">
+            <label
+              className="block text-gray-700 font-medium mb-2"
+              htmlFor="username"
+            >
               Password:
             </label>
             <input
@@ -76,18 +84,16 @@ export default function Login() {
           <button
             type="submit"
             onClick={handelLogin}
-            className="bg-blue-500 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-md w-full mt-4"
+            className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-md w-full mt-4"
           >
             Login
           </button>
         </form>
         <div className="flex justify-center my-4">
-          <Link to={"/login"} className="text-gray-500 hover:text-green-800">
-            Login
-          </Link>
+          <span className="text-gray-600 mx-2">Don't have an account:</span>
           <Link
             to={"/signup"}
-            className="text-gray-500 hover:text-blue-800 ml-4"
+            className=" hover:text-blue-800 ml-4"
           >
             Register
           </Link>
@@ -96,4 +102,3 @@ export default function Login() {
     </div>
   );
 }
-

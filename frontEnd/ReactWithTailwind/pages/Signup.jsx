@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 function Signup() {
-    const Navigate  = useNavigate();
+  const Navigate = useNavigate();
   const [form, setForm] = useState({
     username: "",
     email: "",
@@ -17,22 +17,20 @@ function Signup() {
   };
 
   const handelSignUp = async () => {
-    const {username , email , password} = form;
-    if(!username || !email || !password)
-    {
-        alert('you must filled all details');
-        return;
+    const { username, email, password } = form;
+    if (!username || !email || !password) {
+      alert("you must filled all details");
+      return;
     }
     try {
       const resp = await axios.post("/api/signup", form);
-      if(resp.data)
-      {
+      if (resp.data) {
         alert(`user created successfully`);
-        Navigate('/login')
+        Navigate("/login");
       }
     } catch (error) {
-        alert('server error');
-        console.log(error)
+      alert("server error");
+      console.log(error);
     }
   };
 
@@ -42,8 +40,13 @@ function Signup() {
   };
 
   return (
-    <div className="container mx-auto px-4 pt-8">
-      <div className="bg-white rounded-lg shadow-md p-6 max-w-sm mx-auto">
+    <div
+      className="h-screen flex justify-center flex-col items-end px-20 bg-cover"
+      style={{
+        backgroundImage: `url(https://images.pexels.com/photos/1172675/pexels-photo-1172675.jpeg)`,
+      }}
+    >
+      <div className="bg-white rounded-lg shadow-md p-6 w-1/3">
         <h2 className="text-2xl font-bold mb-4 text-center">Signup</h2>
         <form onSubmit={handleSubmit}>
           <div className="mb-4">
@@ -100,14 +103,9 @@ function Signup() {
           </button>
         </form>
         <div className="flex justify-center my-4">
-          <Link to={"/login"} className="text-gray-500 hover:text-green-800">
+         <span className="text-gray-600 mx-2">Already Have an account:  </span>
+          <Link to={"/login"} className=" hover:text-green-800">
             Login
-          </Link>
-          <Link
-            to={"/signup"}
-            className="text-gray-500 hover:text-blue-800 ml-4"
-          >
-            Register
           </Link>
         </div>
       </div>

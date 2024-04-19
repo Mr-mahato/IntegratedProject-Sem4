@@ -6,7 +6,6 @@ export default function ResolvedQuery() {
 
   const getQuery = async () => {
     try {
-      console.log("hello world");
       const { data } = await axios.get("api/query");
       setQueries(data);
     } catch (error) {
@@ -19,14 +18,13 @@ export default function ResolvedQuery() {
   }, []);
 
   const listQuery = queries.map((query) => {
-    console.log(query);
     if (query.status !== "resolved" || !query.status) return null;
     return (
       <div key={query.id} className="bg-white p-5  rounded-lg shadow-lg">
-        <h1 className="text-2xl font-bold mb-3">{query.query}</h1>
+        <h1 className="text-2xl font-bold mb-3">{query.description}</h1>
         <p className="text-lg mb-2 text-gray-800">{query.resolvedAns}</p>
         <p className="text-gray-500 text-sm italic">
-          Asked by: {query.resolvedBy}
+          Answered by: {query.resolvedBy}
         </p>
       </div>
     );
@@ -53,7 +51,9 @@ export default function ResolvedQuery() {
           </p>
         </div>
       </div>
-      <main className="bg-[#f1f1f1fe] flex flex-col gap-2 p-10">{listQuery}</main>
+      <main className="bg-[#f1f1f1fe] flex flex-col gap-2 p-10">
+        {listQuery}
+      </main>
     </div>
   );
 }
