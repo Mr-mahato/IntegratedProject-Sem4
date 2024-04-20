@@ -3,6 +3,7 @@ const app = express();
 const fs = require("fs");
 const bodyParser = require("body-parser");
 const port = 3500;
+const path=require('path');
 app.use(bodyParser.json());
 
 app.get("/api/summerVegetable", (req, res) => {
@@ -48,9 +49,10 @@ app.delete("/api/deleteMod/:email", (req, res) => {
   });
 });
 
+const file=path.join(__dirname,"/user.json");
 app.post("/api/login", (req, res) => {
   const userData = req.body;
-  fs.readFile("user.json", "utf-8", (err, data) => {
+  fs.readFile(file, "utf-8", (err, data) => {
     if (err) res.send({ status: false });
     data = JSON.parse(data);
     const user = data.find((val) => val.email == userData.email);
