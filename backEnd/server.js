@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const fs = require("fs");
 const bodyParser = require("body-parser");
-const port = 3500;
+const port = 3000;
 app.use(bodyParser.json());
 
 app.get("/api/summerVegetable", (req, res) => {

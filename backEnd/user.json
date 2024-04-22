@@ -28,5 +28,11 @@
     "username": "Adi",
     "password": "1234",
     "role": 2
+  },
+  {
+    "username": "newuser",
+    "email": "user@gmail.com",
+    "password": "1234",
+    "role": 0
   }
 ]
