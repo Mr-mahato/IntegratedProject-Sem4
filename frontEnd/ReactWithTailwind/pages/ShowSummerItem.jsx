@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import Query from "./Query";
 import { SessionContext } from "../context/Session";
+import Footer from './Footer'
 export default function ShowSummerItem({fn , FN}) {
   const {session} = useContext(SessionContext);
   let name = useParams();
@@ -33,8 +34,8 @@ export default function ShowSummerItem({fn , FN}) {
   }
 
   return (
-    <div className="h-full relative w-full  bg-[#f1f1f1]  ">
-      <div className=" relative border bg-white border-gray-200  rounded-lg">
+    <div className="min-h-screen w-full    ">
+      <div className=" relative border bg-[#324a34]   border-gray-200  ">
         <div className="relative">
           <img
             src={fruits.imageUrl}
@@ -43,7 +44,7 @@ export default function ShowSummerItem({fn , FN}) {
           />
         </div>
 
-        <div className="content-section p-10 w-3/4  shadow-lg mx-auto mb-20">
+        <div className=" bg-white relative top-10 rounded-md p-10 w-3/4  shadow-lg mx-auto mb-20">
           <h1 className="text-2xl font-bold">{fruits.name}</h1>
           <p className="mb-4">{fruits.description}</p>{" "}
           {/* Updated for description */}
@@ -83,7 +84,7 @@ export default function ShowSummerItem({fn , FN}) {
         </button>
         {isOpen && <Query />}
         </div>
-       
+        <Footer/>
       </div>
     </div>
   );

@@ -37,7 +37,7 @@ export default function Query() {
   };
 
   return (
-    <div className="border rounded-md absolute top-1/2 left-[25%] w-1/2 bg-gray-800 text-white">
+    <div className="border rounded-md absolute top-[15%] left-1/4 w-1/2 bg-gray-800 text-white">
       <form onSubmit={handleSubmit} className="p-10">
         <div>
           <label htmlFor="title" className="block text-sm font-medium">

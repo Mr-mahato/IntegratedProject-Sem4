@@ -153,7 +153,7 @@ export default function Profile() {
   }, []);
 
   return (
-    <div className="grid grid-cols-4 min-h-screen py-24  bg-[#f1f1f1fe]">
+    <div className="grid grid-cols-4 min-h-screen py-24  bg-[#324a34]">
       <aside className="self-start sticky top-3 col-span-0 bg-gray-200 p-4">
         <ul>
           {session.role == 1 && (

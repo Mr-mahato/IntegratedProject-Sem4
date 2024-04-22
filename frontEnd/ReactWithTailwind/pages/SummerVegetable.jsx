@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import Footer from "./Footer";
 export default function SummerVegetable() {
   const [vegetable, setVegetable] = useState([]);
   const [searchField , setSearchField]  = useState("");
@@ -30,7 +31,7 @@ export default function SummerVegetable() {
          
             <div
               key={val.name}
-              className=" my-4 rounded-lg cursor-pointer shadow-lg bg-white p-4 transition-transform duration-500 ease-in-out hover:scale-105"
+              className=" my-4 rounded-lg cursor-pointer shadow-lg bg-white p-4 transition-transform duration-500 ease-in-out hover:shadow-md hover:scale-105"
             >
               <img
                 src={val.imageUrl}
@@ -49,7 +50,7 @@ export default function SummerVegetable() {
   return (
     <div className="summerVegeContainer w-full h-screen absolute top-0">
       <div
-        className="w-full h-full  flex rounded-md items-center justify-center "
+        className="w-full h-1/2  flex  items-center justify-center "
         style={{
           backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)),url('https://friscofreshmarket.com/wp-content/uploads/2022/06/ways-to-make-summer-vegetables-appealing.jpg`,
           backgroundSize: "cover",
@@ -65,9 +66,10 @@ export default function SummerVegetable() {
           />
         </div>
       </div>
-      <div className="vegContainer  mt-20 flex flex-wrap gap-8 justify-center">
+      <div className="vegContainer bg-[#324a34]  p-10 my-1/2 flex flex-wrap gap-10 justify-center">
         {vegeElem}
       </div>
+      <Footer/>
     </div>
   );
 }

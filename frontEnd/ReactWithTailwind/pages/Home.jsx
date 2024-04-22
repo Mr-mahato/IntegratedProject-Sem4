@@ -1,9 +1,10 @@
 import { useContext, useEffect, useState } from "react";
 import { SessionContext } from "../context/Session";
 import { useNavigate, Link } from "react-router-dom";
+import Footer from "./Footer";
 export default function Home() {
   return (
-    <div className="container absolute top-0 max-w-full">
+    <div className="container absolute bg-[#324a34] top-0 text-white max-w-full">
       <div className="h-screen  ">
         <div
           className="h-full"
@@ -26,27 +27,26 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="season-view grid grid-rows-1 grid-cols-3  mt-10 m-2 p-5">
+      <div className="season-view grid  grid-rows-1 grid-cols-3  mt-10 m-2 p-5">
         {/* image ->> Summer section */}
-        <Link to={'/summer'}>
-        <div className="border h-full mx-2 rounded-md cursor-pointer overflow-hidden shadow-lg transform transition-all duration-500 hover:scale-105">
-          <img
-            src={
-              "https://images.pexels.com/photos/19168813/pexels-photo-19168813/free-photo-of-view-of-a-combine-harvester-on-a-cropland.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-            }
-            alt="this is summer"
-            className="w-full h-64 object-cover"
-          />
-          <div className="p-4">
-            <h1 className="text-2xl font-bold">Summer </h1>
-            <p className="mt-2 text-lg text-gray-700">
-              This is the perfect time to grow heat-loving plants like tomatoes,
-              peppers, and zucchini.
-            </p>
+        <Link to={"/summer"}>
+          <div className="border h-full mx-2  rounded-md cursor-pointer overflow-hidden shadow-lg transform transition-all duration-500 hover:scale-105">
+            <img
+              src={
+                "https://images.pexels.com/photos/19168813/pexels-photo-19168813/free-photo-of-view-of-a-combine-harvester-on-a-cropland.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              }
+              alt="this is summer"
+              className="w-full h-64 object-cover"
+            />
+            <div className="p-4">
+              <h1 className="text-2xl font-bold">Summer </h1>
+              <p className="mt-2 text-lg ">
+                This is the perfect time to grow heat-loving plants like
+                tomatoes, peppers, and zucchini.
+              </p>
+            </div>
           </div>
-        </div>
         </Link>
-
 
         {/* image ->> winter section */}
 
@@ -60,7 +60,7 @@ export default function Home() {
           />
           <div className="p-4">
             <h1 className="text-2xl font-bold">Winter</h1>
-            <p className="mt-2 text-lg text-gray-700">
+            <p className="mt-2 text-lg ">
               Winter is a great time for cool-season crops like broccoli,
               lettuce, and kale. It's also a good time to plan for the spring.
             </p>
@@ -78,7 +78,7 @@ export default function Home() {
           />
           <div className="p-4">
             <h1 className="text-2xl font-bold">Rainy Season</h1>
-            <p className="mt-2 text-lg text-gray-700">
+            <p className="mt-2 text-lg ">
               The rainy season is ideal for water-loving plants like rice, taro,
               and lotus. It's also a good time to prepare for the upcoming dry
               season.
@@ -107,7 +107,7 @@ export default function Home() {
             Maximize Your Harvest: Essential Summer Fruits & Vegetables -
             Emphasizes abundance and profit potential.
           </h1>
-          <p className="mt-3 text-xl text-gray-800">
+          <p className="mt-3 text-xl hover:text-[#e7e2e7ee] text-gray-800">
             Embrace the abundance of summer with our essential guide to the
             season's most profitable fruits and vegetables! Discover varieties
             that thrive in the heat and are in high demand at markets. We'll
@@ -136,7 +136,7 @@ export default function Home() {
             Unlock Winter Flavor: Profitable Crops for Farmers & Freshness for
             All
           </h1>
-          <p className="mt-3 text-xl text-gray-800">
+          <p className="mt-3 text-xl hover:text-[#e7e2e7ee] text-gray-800">
             Say goodbye to boring winter meals! This guide will show you which
             winter crops bring in the most profit. You'll learn how to grow
             strong, healthy vegetables even in the cold and meet the demand for
@@ -145,6 +145,9 @@ export default function Home() {
           </p>
         </div>
       </section>
+
+      {/* footer section */}
+      <Footer />
     </div>
   );
 }

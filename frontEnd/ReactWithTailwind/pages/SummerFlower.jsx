@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import Footer from "./Footer";
 export default function SummerFlower() {
   const [flower, setFlower] = useState([]);
   const [searchField , setSearchField] = useState('');
@@ -44,9 +45,9 @@ export default function SummerFlower() {
   });
 
   return (
-    <div className="absolute w-full top-0">
+    <div className="absolute w-full h-full top-0">
       <div
-        className=" w-full h-screen  flex rounded-md items-center justify-center "
+        className=" w-full h-1/2  flex  items-center justify-center "
         style={{
           backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)),url('https://images.unsplash.com/photo-1498579397066-22750a3cb424?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTE0fHxzdW1tZXIlMjBmcnVpdHN8ZW58MHx8MHx8fDA%3D`,
           backgroundSize: "cover",
@@ -62,9 +63,10 @@ export default function SummerFlower() {
           />
         </div>
       </div>
-      <div className="p-10 my-1/2  z-20 top-[500px] flex flex-wrap gap-10 justify-center">
+      <div className="p-10 my-1/2 bg-[#324a34]   flex flex-wrap gap-10 justify-center">
         {flowElem}
       </div>
+      <Footer/>
     </div>
   );
 }

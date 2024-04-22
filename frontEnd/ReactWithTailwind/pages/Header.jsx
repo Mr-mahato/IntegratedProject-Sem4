@@ -28,30 +28,7 @@ export default function Header() {
         <div className="right  flex items-center gap-4">
       
       
-          {/* <div className="dropdown">
-            <button
-              className="bg-orange-400 p-2 rounded-lg first-letter:text-xl text-white hover:bg-orange-300 font-extrabold"
-              onClick={() => setdropToggle((prev) => (prev = !prev))}
-            >
-              Explore <span className="caret">{dropSymb}</span>
-            </button>
-
-            <div
-              className={`${
-                dropToggle == true ? "hidden" : null
-              } dropdown-content  absolute flex flex-col  gap-1  border-2 border-gray-600 rounded p-2  text-white`}
-            >
-              <Link to="/summer" className="bg-gray-600 p-2 rounded">
-                Summer
-              </Link>
-              <Link to="/winter" className="bg-gray-600 p-2  rounded">
-                Winter
-              </Link>
-              <Link to="/spring" className="bg-gray-600 p-2  rounded">
-                Spring
-              </Link>
-            </div>
-          </div> */}
+          
 
 
 
@@ -69,7 +46,7 @@ export default function Header() {
                   dropToggle == true ? "hidden" : null
                 } dropdown-content  absolute flex flex-col  gap-1  border-2 border-gray-600 rounded p-2  text-white`}
               >
-                <Link to="/profile" className="bg-gray-600 p-2 rounded">
+                <Link to="/profile" className={`bg-gray-600 ${session.role == 0 ?'hidden':'' } p-2 rounded`}>
                   Profile
                 </Link>
                 <Link to="/" className="bg-gray-600 p-2  rounded" onClick={handelLogOut}>

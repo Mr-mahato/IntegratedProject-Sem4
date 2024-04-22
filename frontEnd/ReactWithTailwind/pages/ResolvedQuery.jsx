@@ -1,6 +1,7 @@
 import { React, useEffect, useState } from "react";
 import Header from "./Header.jsx";
 import axios from "axios";
+import Footer from "./Footer.jsx";
 export default function ResolvedQuery() {
   const [queries, setQueries] = useState([]);
 
@@ -51,9 +52,11 @@ export default function ResolvedQuery() {
           </p>
         </div>
       </div>
-      <main className="bg-[#f1f1f1fe] flex flex-col gap-2 p-10">
+      <main className="bg-[#324a34]  flex flex-col gap-2 p-10">
         {listQuery}
       </main>
+
+      <Footer/>
     </div>
   );
 }
