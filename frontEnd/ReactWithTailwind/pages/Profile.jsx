@@ -135,7 +135,7 @@ export default function Profile() {
               setActiveQueryForm(activeQueryForm === q.id ? null : q.id);
               setQueryAsked(q.query);
             }}
-            className={`bg-blue-600 hover:bg-blue-500 py-2 w-40 rounded text-white ${
+            className={`bg-blue-600  hover:bg-blue-500 py-2 w-40 rounded text-white ${
               q.status === "resolved" ? "opacity-50 cursor-not-allowed" : ""
             }`}
             disabled={q.status === "resolved"}

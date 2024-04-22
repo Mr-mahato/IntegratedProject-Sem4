@@ -21,9 +21,9 @@ export default function Home() {
             Assisting in cultivating plants at home for a greener environment
             and access to healthy food.
           </h1>
-          <button className="mt-4 bg-red-700 hover:bg-red-500 text-white p-4 rounded font-medium">
+          <Link to={'/login'} className="mt-4 bg-red-700 hover:bg-red-500 text-white p-4 rounded font-medium">
             Get Started
-          </button>
+          </Link>
         </div>
       </div>
 
