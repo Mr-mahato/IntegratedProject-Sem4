@@ -1,10 +1,12 @@
 import "../style.css";
 import { Link, useNavigate } from "react-router-dom";
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 
 import { SessionContext } from "../context/Session";
 export default function Header() {
   const { session, setSession } = useContext(SessionContext);
+  const [toggleSearch, setToggleSearch] = useState(false);
+  const [itemSearch, setItemSearch] = useState("");
 
   const [dropToggle, setdropToggle] = useState(true);
   let dropSymb = <span className="caret">&#9658;</span>; // Up arrow for open state
@@ -15,23 +17,43 @@ export default function Header() {
     setSession(null);
   };
 
+  const handelKeyPress = (e)=>{
+    if(e.key == 'Enter'){
+      console.log(itemSearch);
+      setItemSearch('');
+    }
+  }
+
   return (
     <div className="navbar z-10 absolute   w-full px-10">
-      <nav className="flex  justify-between h-[100px] items-center  p-5">
-        <Link to={"/"}>
-          <div className="left">
-            <h1 className="text-2xl text-white font-extrabold">AgroGuide</h1>
+      <nav className="flex  justify-between  h-[100px] items-center  p-5">
+        <Link to={"/"} className="">
+          <div className="left ">
+            <h1 className="text-2xl  text-white font-extrabold">AgroGuide</h1>
           </div>
         </Link>
+        {/* this is the serach bar that will appear when you will click the  */}
 
+        {toggleSearch && (
+          <div className="  w-[500px] ">
+            <input
+            onKeyDown={handelKeyPress}
+              type="text"
+              value={itemSearch}
+              onChange={(e) => setItemSearch(e.target.value)}
+              placeholder="Expolre your Intrest..."
+              className="w-full  px-4 py-2 rounded-md border-gray-600 text-gray-500  focus:outline-none focus:border-blue-500"
+            />
+          </div>
+        )}
 
         <div className="right  flex items-center gap-4">
-      
-      
-          
-
-
-
+          <button
+            className="text-white"
+            onClick={() => setToggleSearch((prev) => (prev = !prev))}
+          >
+            Search
+          </button>
           {session ? (
             <div className="dropdown">
               <button
@@ -46,10 +68,19 @@ export default function Header() {
                   dropToggle == true ? "hidden" : null
                 } dropdown-content  absolute flex flex-col  gap-1  border-2 border-gray-600 rounded p-2  text-white`}
               >
-                <Link to="/profile" className={`bg-gray-600 ${session.role == 0 ?'hidden':'' } p-2 rounded`}>
+                <Link
+                  to="/profile"
+                  className={`bg-gray-600 ${
+                    session.role == 0 ? "hidden" : ""
+                  } p-2 rounded`}
+                >
                   Profile
                 </Link>
-                <Link to="/" className="bg-gray-600 p-2  rounded" onClick={handelLogOut}>
+                <Link
+                  to="/"
+                  className="bg-gray-600 p-2  rounded"
+                  onClick={handelLogOut}
+                >
                   LogOut
                 </Link>
               </div>
@@ -61,7 +92,6 @@ export default function Header() {
               </button>
             </Link>
           )}
-          
         </div>
       </nav>
     </div>

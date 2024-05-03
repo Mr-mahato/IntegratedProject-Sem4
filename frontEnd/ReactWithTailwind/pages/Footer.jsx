@@ -9,20 +9,20 @@ import {
 
 export default function Footer() {
   return (
-    <footer class="relative bg-[#273d28] text-white pt-8 pb-6">
+    <footer className="relative bg-[#273d28] text-white pt-8 pb-6">
       <br></br>
-      <div class="container mx-auto px-11 py-3">
-        <div class="flex flex-wrap text-left lg:text-left">
-          <div class="w-full lg:w-6/12 px-4">
-            <h4 class="text-3xl font-montserrat  text-blueGray-700 ">
+      <div className="container mx-auto px-11 py-3">
+        <div className="flex flex-wrap text-left lg:text-left">
+          <div className="w-full lg:w-6/12 px-4">
+            <h4 className="text-3xl font-montserrat  text-blueGray-700 ">
               AgroGuide
             </h4>
-            <h5 class="text-sm mt-0 mb-2 text-blueGray-600 ">
+            <h5 className="text-sm mt-0 mb-2 text-blueGray-600 ">
               Empowering Agriculture, Nourishing the World
             </h5>
             <div className="border-t border-#405741 opacity-20"></div>
 
-            <div class="mt-6 lg:mb-0 mb-6">
+            <div className="mt-6 lg:mb-0 mb-6">
               {/* <button
                 class="bg-white text-lightBlue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
                 type="button"
@@ -49,39 +49,39 @@ export default function Footer() {
               </button> */}
 
               <button
-                class=" text-lightBlue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+                className=" text-lightBlue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
                 type="button"
               >
                 <FontAwesomeIcon icon={faGithub} />
               </button>
               <button
-                class=" text-lightBlue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+                className=" text-lightBlue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
                 type="button"
               >
                 <FontAwesomeIcon icon={faTwitter} />
               </button>
              
               <button
-                class=" text-blueGray-800 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+                className=" text-blueGray-800 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
                 type="button"
               >
                 <FontAwesomeIcon icon={faFacebookSquare} />
               </button>
               <button
-                class=" text-blueGray-800 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+                className=" text-blueGray-800 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
                 type="button"
               >
                 <FontAwesomeIcon icon={faLinkedin} />
               </button>
             </div>
           </div>
-          <div class="w-full lg:w-6/12 px-20">
-            <div class="flex flex-wrap items-top mb-6">
-              <div class="w-full lg:w-5/12 px-4 ml-auto">
-                <span class="block uppercase text-blueGray-500 text-sm font-semibold mb-2">
+          <div className="w-full lg:w-6/12 px-20">
+            <div className="flex flex-wrap items-top mb-6">
+              <div className="w-full lg:w-5/12 px-4 ml-auto">
+                <span className="block uppercase text-blueGray-500 text-sm font-semibold mb-2">
                   Useful Links
                 </span>
-                <ul class="list-unstyled">
+                <ul className="list-unstyled">
                   {/* <li>
                 <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="#">Blog</a>
               </li>
@@ -96,8 +96,8 @@ export default function Footer() {
             </li> */}
                 </ul>
               </div>
-              <div class="w-full lg:w-6/12 px-0">
-                <span class="block uppercase text-blueGray-500 text-sm font-semibold mb-2">
+              <div className="w-full lg:w-6/12 px-0">
+                <span className="block uppercase text-blueGray-500 text-sm font-semibold mb-2">
                   Newsletter
                 </span>
                 <ul className="">
@@ -124,10 +124,10 @@ export default function Footer() {
           </div>
         </div>
 
-        <hr class="my-6 border-#405741 opacity-20" />
-        <div class="flex flex-wrap items-center md:justify-between justify-center">
-          <div class="w-full md:w-4/12 px-4 mx-auto text-center">
-            <div class="text-sm text-blueGray-500 font-semibold py-1">
+        <hr className="my-6 border-#405741 opacity-20" />
+        <div className="flex flex-wrap items-center md:justify-between justify-center">
+          <div className="w-full md:w-4/12 px-4 mx-auto text-center">
+            <div className="text-sm text-blueGray-500 font-semibold py-1">
               © <span id="get-current-year">2024 </span>AgroGuide.
             </div>
           </div>

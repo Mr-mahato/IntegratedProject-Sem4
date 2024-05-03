@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { SessionContext } from "../context/Session";
 import { useNavigate, Link } from "react-router-dom";
 import Footer from "./Footer";
+import Bot from "./Bot";
 export default function Home() {
   return (
     <div className="container absolute bg-[#324a34] top-0 text-white max-w-full">
@@ -21,9 +22,15 @@ export default function Home() {
             Assisting in cultivating plants at home for a greener environment
             and access to healthy food.
           </h1>
-          <Link to={'/login'} className="mt-4 bg-red-700 hover:bg-red-500 text-white p-4 rounded font-medium">
+          <Link
+            to={"/login"}
+            className="mt-4 bg-red-700 hover:bg-red-500 text-white p-4 rounded font-medium"
+          >
             Get Started
           </Link>
+        </div>
+        <div className="absolute top-[10%] right-[10%]">
+          <Bot />
         </div>
       </div>
 

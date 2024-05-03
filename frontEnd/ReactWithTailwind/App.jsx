@@ -14,6 +14,7 @@ import { SessionProvider } from "./context/Session";
 import Error from "./pages/Error";
 import Profile from "./pages/Profile";
 import Query from "./pages/Query";
+import Bot from "./pages/Bot";
 import ResolvedQuery from "./pages/ResolvedQuery";
 export default function App() {
   return (
@@ -56,6 +57,7 @@ export default function App() {
             />
           </Route>
           <Route path="/query" element={<Query />} />
+          <Route path="/bot"  element={<Bot/>} />
           <Route path="/resolvedQuery" element={<ResolvedQuery />} />
           <Route path="*" element={<Error />} />
         </Routes>
