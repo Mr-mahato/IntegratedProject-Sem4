@@ -1,3 +1,5 @@
+require("dotenv").config();
+const { GoogleGenerativeAI } = require("@google/generative-ai");
 const express = require("express");
 const app = express();
 const fs = require("fs");
@@ -12,6 +14,25 @@ app.get("/api/summerVegetable", (req, res) => {
     res.send(data);
   });
 });
+
+// Access your API key as an environment variable (see "Set up your API key" above)
+const genAI = new GoogleGenerativeAI(process.env.API_URL);
+
+// this will solve the bot query
+app.post("/api/generate", async (req, res) => {
+  try {
+    const { query } = req.body;
+    console.log(query)
+    const model = genAI.getGenerativeModel({ model: "gemini-pro" });
+    const result = await model.generateContent(query);
+    const response = await result.response;
+    const text = response.text();
+    res.send(text);
+  } catch (error) {
+    res.send("Internal server error");
+  }
+});
+
 
 app.post("/api/signup", (req, res) => {
   const userData = req.body;
@@ -88,22 +109,22 @@ app.post("/api/query/:id", (req, res) => {
   });
 });
 
-// lets write a endpoin which will have the query being asked by normal user 
-app.post('/api/query', (req, res) => {  
+// lets write a endpoin which will have the query being asked by normal user
+app.post("/api/query", (req, res) => {
   let queryRaised = req.body;
-  const id = Math.floor(Math.random()*100);
-  queryRaised = {...queryRaised , id}
+  const id = Math.floor(Math.random() * 100);
+  queryRaised = { ...queryRaised, id };
 
-  fs.readFile('query.json', 'utf-8', (err, data) => {
-    if(err) res.send({status:false});
+  fs.readFile("query.json", "utf-8", (err, data) => {
+    if (err) res.send({ status: false });
     data = JSON.parse(data);
     data.push(queryRaised);
-    fs.writeFile('query.json', JSON.stringify(data), (err) => {
-      if(err) res.send({status:false});
-      res.send({status:true});
-    })
-  })
-})
+    fs.writeFile("query.json", JSON.stringify(data), (err) => {
+      if (err) res.send({ status: false });
+      res.send({ status: true });
+    });
+  });
+});
 
 app.get("/api/vegetable/:vegName", (req, res) => {
   const { vegName } = req.params;

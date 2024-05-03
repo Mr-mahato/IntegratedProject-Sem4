@@ -3,7 +3,9 @@
     "start": "nodemon server.js"
   },
   "dependencies": {
+    "@google/generative-ai": "^0.8.0",
     "body-parser": "^1.20.2",
+    "dotenv": "^16.4.5",
     "express": "^4.19.2",
     "nodemon": "^3.1.0"
   }
