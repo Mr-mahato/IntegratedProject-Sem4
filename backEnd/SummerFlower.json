@@ -12,7 +12,8 @@
     "sunlight": "Full sun.",
     "diseases": "Powdery mildew, rust, botrytis.",
     "solutions": "Good air circulation, avoid overhead watering, remove infected plant parts.",
-    "fertilizers": "Balanced fertilizer at planting, top-dress with compost during the growing season."
+    "fertilizers": "Balanced fertilizer at planting, top-dress with compost during the growing season.",
+    "season": "summer"
   },
   {
     "name": "Rose",
@@ -27,7 +28,8 @@
     "sunlight": "Full sun to partial shade.",
     "diseases": "Powdery mildew, black spot, rust.",
     "solutions": "Good air circulation, avoid overhead watering, remove infected plant parts.",
-    "fertilizers": "Balanced fertilizer at planting, top-dress with compost during the growing season."
+    "fertilizers": "Balanced fertilizer at planting, top-dress with compost during the growing season.",
+    "season": "summer"
   },
   {
     "name": "Lavender",
@@ -42,7 +44,8 @@
     "sunlight": "Full sun.",
     "diseases": "Root rot, fungal diseases.",
     "solutions": "Avoid overwatering, provide good drainage, avoid overhead watering.",
-    "fertilizers": "Avoid excessive fertilization, top-dress with compost during the growing season."
+    "fertilizers": "Avoid excessive fertilization, top-dress with compost during the growing season.",
+    "season": "summer"
   },
   {
     "name": "Tulip",
@@ -57,7 +60,8 @@
     "sunlight": "Full sun to partial shade.",
     "diseases": "Botrytis, tulip fire, mosaic virus.",
     "solutions": "Avoid overhead watering, remove infected plant parts, plant disease-resistant varieties.",
-    "fertilizers": "Balanced fertilizer at planting, top-dress with compost during the growing season."
+    "fertilizers": "Balanced fertilizer at planting, top-dress with compost during the growing season.",
+    "season": "summer"
   },
   {
     "name": "Daisy",
@@ -72,7 +76,8 @@
     "sunlight": "Full sun.",
     "diseases": "Powdery mildew, leaf spot, crown rot.",
     "solutions": "Good air circulation, avoid overhead watering, remove infected plant parts.",
-    "fertilizers": "Balanced fertilizer at planting, top-dress with compost during the growing season."
+    "fertilizers": "Balanced fertilizer at planting, top-dress with compost during the growing season.",
+    "season": "summer"
   },
   {
     "name": "Orchid",
@@ -87,7 +92,8 @@
     "sunlight": "Indirect sunlight.",
     "diseases": "Root rot, fungal diseases.",
     "solutions": "Avoid overwatering, provide good drainage, avoid overhead watering.",
-    "fertilizers": "Avoid excessive fertilization, top-dress with compost during the growing season."
+    "fertilizers": "Avoid excessive fertilization, top-dress with compost during the growing season.",
+    "season": "summer"
   },
   {
     "name": "Peony",
@@ -102,7 +108,8 @@
     "sunlight": "Full sun to partial shade.",
     "diseases": "Botrytis, powdery mildew, leaf spot.",
     "solutions": "Good air circulation, avoid overhead watering, remove infected plant parts.",
-    "fertilizers": "Balanced fertilizer at planting, top-dress with compost during the growing season."
+    "fertilizers": "Balanced fertilizer at planting, top-dress with compost during the growing season.",
+    "season": "summer"
   },
   {
     "name": "Marigold",
@@ -117,7 +124,8 @@
     "sunlight": "Full sun.",
     "diseases": "Powdery mildew, rust, botrytis.",
     "solutions": "Good air circulation, avoid overhead watering, remove infected plant parts.",
-    "fertilizers": "Balanced fertilizer at planting, top-dress with compost during the growing season."
+    "fertilizers": "Balanced fertilizer at planting, top-dress with compost during the growing season.",
+    "season": "summer"
   },
   {
     "name": "Daffodil",
@@ -132,7 +140,8 @@
     "sunlight": "Full sun to partial shade.",
     "diseases": "Botrytis, tulip fire, mosaic virus.",
     "solutions": "Avoid overhead watering, remove infected plant parts, plant disease-resistant varieties.",
-    "fertilizers": "Balanced fertilizer at planting, top-dress with compost during the growing season."
+    "fertilizers": "Balanced fertilizer at planting, top-dress with compost during the growing season.",
+    "season": "summer"
   },
   {
     "name": "Hydrangea",
@@ -147,7 +156,8 @@
     "sunlight": "Partial shade.",
     "diseases": "Powdery mildew, leaf spot, root rot.",
     "solutions": "Good air circulation, avoid overhead watering, remove infected plant parts.",
-    "fertilizers": "Balanced fertilizer at planting, top-dress with compost during the growing season."
+    "fertilizers": "Balanced fertilizer at planting, top-dress with compost during the growing season.",
+    "season": "summer"
   },
   {
     "name": "Carnation",
@@ -162,7 +172,8 @@
     "sunlight": "Full sun.",
     "diseases": "Powdery mildew, rust, botrytis.",
     "solutions": "Good air circulation, avoid overhead watering, remove infected plant parts.",
-    "fertilizers": "Balanced fertilizer at planting, top-dress with compost during the growing season."
+    "fertilizers": "Balanced fertilizer at planting, top-dress with compost during the growing season.",
+    "season": "summer"
   },
   {
     "name": "Cherry Blossom",
@@ -177,6 +188,7 @@
     "sunlight": "Full sun.",
     "diseases": "Powdery mildew, leaf spot, root rot.",
     "solutions": "Good air circulation, avoid overhead watering, remove infected plant parts.",
-    "fertilizers": "Balanced fertilizer at planting, top-dress with compost during the growing season."
+    "fertilizers": "Balanced fertilizer at planting, top-dress with compost during the growing season.",
+    "season": "summer"
   }
 ]

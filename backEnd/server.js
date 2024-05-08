@@ -4,15 +4,20 @@ const express = require("express");
 const app = express();
 const fs = require("fs");
 const bodyParser = require("body-parser");
-const port = 3000;
+const port = 3500;
 app.use(bodyParser.json());
-
+const { connectDb, dbName } = require("./DbConn");
+const { ObjectId } = require("mongodb");
+connectDb();
 app.get("/api/summerVegetable", (req, res) => {
-  fs.readFile("SummerVegetable.json", "utf-8", (err, data) => {
-    if (err) res.send("Internal server error");
-    data = JSON.parse(data);
-    res.send(data);
-  });
+  dbName
+    .collection("Vegetable")
+    .find({})
+    .toArray()
+    .then((data) => {
+      if (data) res.send(data);
+    })
+    .catch((err) => console.log("err"));
 });
 
 // Access your API key as an environment variable (see "Set up your API key" above)
@@ -22,17 +27,51 @@ const genAI = new GoogleGenerativeAI(process.env.API_URL);
 app.post("/api/generate", async (req, res) => {
   try {
     const { query } = req.body;
-    console.log(query)
+    console.log;
     const model = genAI.getGenerativeModel({ model: "gemini-pro" });
     const result = await model.generateContent(query);
-    const response = await result.response;
+    const response = result.response;
     const text = response.text();
     res.send(text);
   } catch (error) {
+    console.log(error);
     res.send("Internal server error");
   }
 });
 
+app.post("/api/search", async (req, res) => {
+  try {
+    const { itemSearch } = req.body;
+    let dbCollection = await dbName.listCollections().toArray();
+    let foundData = null; // Initialize foundData as null
+
+    for (let i = 0; i < dbCollection.length; i++) {
+      const val = dbCollection[i];
+      const collection = dbName.collection(val.name);
+
+      // Use await to wait for the findOne operation to complete
+      const data = await collection.findOne({
+        name: { $regex: new RegExp("^" + itemSearch, "i") },
+      });
+
+      if (data) {
+        foundData = data;
+        break; // Exit loop if data is found
+      }
+    }
+
+    if (foundData) {
+      console.log("Found data:", foundData);
+      res.send(foundData); // Send found data as response
+    } else {
+      console.log("Data not found");
+      res.send({status:false}); // Send response indicating data not found
+    }
+  } catch (err) {
+    console.error("Error occurred:", err);
+    res.status(500).send("Internal server error"); // Send 500 status in case of error
+  }
+});
 
 app.post("/api/signup", (req, res) => {
   const userData = req.body;
@@ -126,50 +165,77 @@ app.post("/api/query", (req, res) => {
   });
 });
 
-app.get("/api/vegetable/:vegName", (req, res) => {
-  const { vegName } = req.params;
-  fs.readFile("SummerVegetable.json", "utf-8", (err, data) => {
-    if (err) res.send("internal server error");
-    data = JSON.parse(data);
-    data = data.filter((val) => val.name == vegName);
-    res.send(data);
-  });
+app.get("/api/vegetable/:id", (req, res) => {
+  const { id } = req.params;
+  console.log(id);
+  let o_id = new ObjectId(id);
+  dbName
+    .collection("Vegetable")
+    .findOne({ _id: o_id })
+    .then((val) => {
+      console.log(id);
+      if (val) res.send(val);
+      else console.log("not found");
+    })
+    .catch((err) => {
+      res.send(err);
+    });
 });
 
 app.get("/api/summerFruit", (req, res) => {
-  fs.readFile("SummerFruit.json", "utf-8", (err, data) => {
-    if (err) res.send("Internal server error");
-    data = JSON.parse(data);
-    res.send(data);
-  });
+  dbName
+    .collection("Fruits")
+    .find({})
+    .toArray()
+    .then((data) => {
+      if (data) res.send(data);
+    })
+    .catch((err) => console.log("err"));
 });
 
-app.get("/api/fruit/:fruitName", (req, res) => {
-  const { fruitName } = req.params;
-  fs.readFile("SummerFruit.json", "utf-8", (err, data) => {
-    if (err) res.send("internal server error");
-    data = JSON.parse(data);
-    data = data.filter((val) => val.name == fruitName);
-    res.send(data);
-  });
+app.get("/api/fruit/:id", (req, res) => {
+  const { id } = req.params;
+  console.log(id);
+  let o_id = new ObjectId(id);
+  dbName
+    .collection("Fruits")
+    .findOne({ _id: o_id })
+    .then((val) => {
+      console.log(id);
+      if (val) res.send(val);
+      else console.log("not found");
+    })
+    .catch((err) => {
+      res.send(err);
+    });
 });
 
 app.get("/api/flower", (req, res) => {
-  fs.readFile("SummerFlower.json", "utf-8", (err, data) => {
-    if (err) res.send("Internal server error");
-    data = JSON.parse(data);
-    res.send(data);
-  });
+  dbName
+    .collection("Flower")
+    .find({})
+    .toArray()
+    .then((data) => {
+      if (data) res.send(data);
+    })
+    .catch((err) => console.log("err"));
 });
 
-app.get("/api/flower/:flowerName", (req, res) => {
-  const { flowerName } = req.params;
-  fs.readFile("SummerFlower.json", "utf-8", (err, data) => {
-    if (err) res.send("internal server error");
-    data = JSON.parse(data);
-    data = data.filter((val) => val.name == flowerName);
-    res.send(data);
-  });
+app.get("/api/flower/:id", (req, res) => {
+  const { id } = req.params;
+  console.log(id);
+  let o_id = new ObjectId(id);
+  dbName
+    .collection("Flower")
+    .findOne({ _id: o_id })
+    .then((val) => {
+      console.log(id);
+      if (val) res.send(val);
+      else console.log("not found");
+    })
+    .catch((err) => {
+      res.send(err);
+    });
 });
 
 app.listen(port, () => {

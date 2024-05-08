@@ -13,7 +13,8 @@
     "sunlight": "Full sun.",
     "diseases": "Powdery mildew, downy mildew, anthracnose.",
     "solutions": "Proper spacing, avoid overhead watering, choose resistant varieties.",
-    "fertilizers": "Balanced fertilizer at planting, side-dress with compost during the season."
+    "fertilizers": "Balanced fertilizer at planting, side-dress with compost during the season.",
+    "season": "summer"
   },
   {
     "name": "Mango",
@@ -22,14 +23,15 @@
     "nutrition": "Rich in vitamins A and C, fiber, and antioxidants. Contains unique compounds like mangiferin.",
     "uses": "Eaten fresh, used in juices, smoothies, salads, desserts, and preserves.",
     "cultivation": "Grows on large evergreen trees. Prefers warm climates with distinct dry periods.",
-    "imageUrl": "https://images.unsplash.com/photo-1623930376395-0f3ad22cfac2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjZ8fG1hbmdvfGVufDB8fDB8fHww", 
+    "imageUrl": "https://images.unsplash.com/photo-1623930376395-0f3ad22cfac2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjZ8fG1hbmdvfGVufDB8fDB8fHww",
     "details": "Many varieties with different shapes, sizes, and flavors. Ripe mangoes are slightly soft and fragrant.",
     "instructions": "Purchase ripe mangoes or allow to ripen at room temperature if purchased firm.",
     "water": "Deep, infrequent watering for established trees.",
     "sunlight": "Full sun.",
     "diseases": "Powdery mildew, anthracnose, mango malformation.",
     "solutions": "Proper pruning for air circulation, fungicide applications if necessary, choose resistant varieties.",
-    "fertilizers": "Balanced fertilizer for young trees, specialized mango fertilizer for mature trees."
+    "fertilizers": "Balanced fertilizer for young trees, specialized mango fertilizer for mature trees.",
+    "season": "summer"
   },
   {
     "name": "Pineapple",
@@ -45,7 +47,8 @@
     "sunlight": "Full sun.",
     "diseases": "Pineapple fusarium wilt, pink disease, root rot.",
     "solutions": "Proper drainage, avoid overwatering, remove infected plants.",
-    "fertilizers": "Balanced fertilizer during the growing season, avoid high-nitrogen fertilizers."
+    "fertilizers": "Balanced fertilizer during the growing season, avoid high-nitrogen fertilizers.",
+    "season": "summer"
   },
   {
     "name": "Strawberry",
@@ -61,7 +64,8 @@
     "sunlight": "Full sun to partial shade.",
     "diseases": "Powdery mildew, botrytis fruit rot, verticillium wilt.",
     "solutions": "Proper spacing for air circulation, remove infected plants, choose resistant varieties.",
-    "fertilizers": "Balanced fertilizer at planting, side-dress with compost during the season."
+    "fertilizers": "Balanced fertilizer at planting, side-dress with compost during the season.",
+    "season": "summer"
   },
   {
     "name": "Banana",
@@ -77,7 +81,8 @@
     "sunlight": "Full sun to partial shade.",
     "diseases": "Panama disease, black sigatoka, banana bunchy top virus.",
     "solutions": "Proper sanitation, remove infected plants, choose resistant varieties.",
-    "fertilizers": "Balanced fertilizer during the growing season, avoid high-nitrogen fertilizers."
+    "fertilizers": "Balanced fertilizer during the growing season, avoid high-nitrogen fertilizers.",
+    "season": "summer"
   },
   {
     "name": "Litchi (Lychee)",
@@ -93,9 +98,9 @@
     "sunlight": "Full sun to partial shade.",
     "diseases": "Leaf blight, anthracnose, litchi bugs.",
     "solutions": "Proper sanitation, fungicide applications if necessary, pest control measures.",
-    "fertilizers": "Balanced fertilizer with micronutrients."
+    "fertilizers": "Balanced fertilizer with micronutrients.",
+    "season": "summer"
   },
-
   {
     "name": "Papaya",
     "origin": "Central America",
@@ -110,7 +115,8 @@
     "sunlight": "Full sun to partial shade.",
     "diseases": "Papaya ringspot virus, powdery mildew, anthracnose.",
     "solutions": "Proper sanitation, remove infected plants, choose resistant varieties.",
-    "fertilizers": "Balanced fertilizer during the growing season, avoid high-nitrogen fertilizers."
+    "fertilizers": "Balanced fertilizer during the growing season, avoid high-nitrogen fertilizers.",
+    "season": "summer"
   },
   {
     "name": "Grapes",
@@ -119,14 +125,15 @@
     "nutrition": "High in vitamins C and K, antioxidants, and resveratrol. Contains unique compounds like quercetin and catechins.",
     "uses": "Eaten fresh, used in juices, wines, jams, jellies, and desserts.",
     "cultivation": "Grows on woody vines known as grapevines. Prefers warm, temperate climates with well-draining soil.",
-    "imageUrl": "https://images.unsplash.com/photo-1599819177626-b50f9dd21c9b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGdyYXBlc3xlbnwwfHwwfHx8MA%3D%3D", 
+    "imageUrl": "https://images.unsplash.com/photo-1599819177626-b50f9dd21c9b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGdyYXBlc3xlbnwwfHwwfHx8MA%3D%3D",
     "details": "Many    varieties with different flavors, colors, and uses. Ripe grapes are plump, firm, and sweet.",
     "instructions": "Choose grapes with plump, firm skin and a slight give when pressed. Store in the refrigerator and consume quickly.",
     "water": "Regular watering, especially during the growing season.",
     "sunlight": "Full sun to partial shade.",
     "diseases": "Powdery mildew, downy mildew, black rot.",
     "solutions": "Proper pruning for air circulation, fungicide applications if necessary, choose resistant varieties.",
-    "fertilizers": "Balanced fertilizer during the growing season, avoid high-nitrogen fertilizers."
+    "fertilizers": "Balanced fertilizer during the growing season, avoid high-nitrogen fertilizers.",
+    "season": "summer"
   },
   {
     "name": "Blueberries",
@@ -135,13 +142,14 @@
     "nutrition": "High in vitamins C and K, fiber, and antioxidants. Contains unique compounds like anthocyanins and pterostilbene.",
     "uses": "Eaten fresh, used in desserts, smoothies, salads, and baked goods.",
     "cultivation": "Grows on low, spreading plants known as blueberry bushes. Prefers cool, acidic soil with good drainage.",
-    "imageUrl": "https://images.unsplash.com/photo-1498557850523-fd3d118b962e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Ymx1ZWJlcnJpZXN8ZW58MHx8MHx8fDA%3D", 
+    "imageUrl": "https://images.unsplash.com/photo-1498557850523-fd3d118b962e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Ymx1ZWJlcnJpZXN8ZW58MHx8MHx8fDA%3D",
     "details": "Many varieties with different flavors, sizes, and colors. Ripe blueberries are plump, firm, and sweet.",
     "instructions": "Choose blueberries with a deep blue color and a slight white bloom. Store in the refrigerator and consume quickly.",
     "water": "Regular watering, especially during the growing season.",
     "sunlight": "Full sun to partial shade.",
     "diseases": "Mummy berry, anthracnose, phytophthora root rot.",
     "solutions": "Proper pruning for air circulation, remove infected plants, choose resistant varieties.",
-    "fertilizers": "Acidic fertilizer for blueberries, avoid high-nitrogen fertilizers."
+    "fertilizers": "Acidic fertilizer for blueberries, avoid high-nitrogen fertilizers.",
+    "season": "summer"
   }
 ]
