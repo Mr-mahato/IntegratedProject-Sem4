@@ -27,7 +27,7 @@ export default function SummerVegetable() {
   }).map((val) => {
     return (
       <div>
-        <Link to={`/summer/vegetable/${val.name}`}>
+        <Link to={`/summer/vegetable/${val._id}`}>
          
             <div
               key={val.name}

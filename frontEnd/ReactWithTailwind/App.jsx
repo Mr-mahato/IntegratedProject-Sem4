@@ -16,15 +16,14 @@ import Profile from "./pages/Profile";
 import Query from "./pages/Query";
 import Bot from "./pages/Bot";
 import ResolvedQuery from "./pages/ResolvedQuery";
+import SearchView from "./pages/SearchView";
 export default function App() {
   return (
     <>
       <SessionProvider>
         <Routes>
-         
-            <Route path="/login" element={<Login />} />
-            <Route path="/signup" element={<Signup />} />
-       
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
 
           <Route path="/" element={<HomeLayout />}>
             <Route path="/" element={<Home />} />
@@ -48,16 +47,24 @@ export default function App() {
               path="/summer/fruit/:fruitName"
               element={<ShowSummerItem fn="fruit" FN="fruitName" />}
             />
+             
+            
 
             <Route path="/summer/flower" element={<SummerFlower />} />
             {/* this will show the flower */}
             <Route
-              path="/summer/flower/:flowerName"
-              element={<ShowSummerItem fn="flower" FN="flowerName" />}
+              path="/summer/flower/:id"
+              element={<ShowSummerItem fn="flower" FN="id" />}
             />
           </Route>
+          <Route path="/" element={<SummerLayout />}>
+          <Route
+              path="/search/:id"
+              element={<SearchView />}
+            />
+            </Route>
           <Route path="/query" element={<Query />} />
-          <Route path="/bot"  element={<Bot/>} />
+          <Route path="/bot" element={<Bot />} />
           <Route path="/resolvedQuery" element={<ResolvedQuery />} />
           <Route path="*" element={<Error />} />
         </Routes>

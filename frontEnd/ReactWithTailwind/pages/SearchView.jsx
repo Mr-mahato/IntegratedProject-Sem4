@@ -1,38 +1,23 @@
-import React, { useEffect, useState , useContext } from "react";
-import { useParams } from "react-router-dom";
-import axios from "axios";
+import React, { useEffect, useState, useContext } from "react";
+import { useParams, useLocation } from "react-router-dom";
 import Query from "./Query";
 import { SessionContext } from "../context/Session";
-import Footer from './Footer'
-export default function ShowSummerItem({fn , FN}) {
-  const {session} = useContext(SessionContext);
-  let name = useParams();
-  name = name[`${FN}`];
-  console.log(fn , name);
-  const [fruits, setParticularFruits] = useState({});
+import Footer from "./Footer";
+import Header from "./Header";
+
+export default function SearchView({ fn, FN }) {
+  const location = useLocation();
+  const fruits = location.state.searchData;
+  const { session } = useContext(SessionContext);
   const [isOpen, setisOpen] = useState(false);
 
-  useEffect(() => {
-    const getVegetable = async () => {
-      try {
-        const summerVegi = await axios.get(`/api/${fn}/${name}`);
-        console.log(summerVegi.data);
-        setParticularFruits(summerVegi.data);
-      } catch (error) {
-        console.log(error);
-      }
-    };
-    getVegetable();
-  }, []);
-
-  const handelQuery = ()=>{
+  const handelQuery = () => {
     console.log(session);
-    if(!session)
-    {
-      return alert('please logged in');
+    if (!session) {
+      return alert("please logged in");
     }
     setisOpen(!isOpen);
-  }
+  };
 
   return (
     <div className="min-h-screen w-full    ">
@@ -78,14 +63,14 @@ export default function ShowSummerItem({fn , FN}) {
             <p>{fruits.water}</p>
           </div>
           <button
-          onClick={handelQuery}
-          className="text-2xl sticky right-0 bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
-        >
-          {isOpen? "Close Query" : "Ask Query"}
-        </button>
-        {isOpen && <Query />}
+            onClick={handelQuery}
+            className="text-2xl sticky right-0 bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
+          >
+            {isOpen ? "Close Query" : "Ask Query"}
+          </button>
+          {isOpen && <Query />}
         </div>
-        <Footer/>
+        <Footer />
       </div>
     </div>
   );

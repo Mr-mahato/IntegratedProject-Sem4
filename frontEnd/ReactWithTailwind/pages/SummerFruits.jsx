@@ -28,9 +28,10 @@ export default function SummerFruits() {
     })
     .map((val) => {
       return (
-        <Link to={`/summer/fruit/${val.name}`}>
+        <div key={val._id}>
+        <Link to={`/summer/fruit/${val._id}`}>
           <div
-            key={val.name}
+            
             className="max-w-md rounded-lg cursor-pointer shadow-md bg-white p-4"
           >
             <img
@@ -43,6 +44,7 @@ export default function SummerFruits() {
             </div>
           </div>
         </Link>
+        </div>
       );
     });
 

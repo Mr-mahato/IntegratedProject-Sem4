@@ -2,10 +2,16 @@ import { useContext, useEffect, useState } from "react";
 import { SessionContext } from "../context/Session";
 import { useNavigate, Link } from "react-router-dom";
 import Footer from "./Footer";
+import bot from "../images/robotiBot.png";
 import Bot from "./Bot";
 export default function Home() {
+  const { session, setSession } = useContext(SessionContext);
+
+  const [showBot, setShowBot] = useState(false);
+
+
   return (
-    <div className="container absolute bg-[#324a34] top-0 text-white max-w-full">
+    <div className="container relative bg-[#324a34] top-0 text-white max-w-full">
       <div className="h-screen  ">
         <div
           className="h-full"
@@ -22,16 +28,30 @@ export default function Home() {
             Assisting in cultivating plants at home for a greener environment
             and access to healthy food.
           </h1>
-          <Link
-            to={"/login"}
-            className="mt-4 bg-red-700 hover:bg-red-500 text-white p-4 rounded font-medium"
-          >
-            Get Started
-          </Link>
+          {!session && (
+            <Link
+              to={"/login"}
+              className="mt-4 bg-red-700 hover:bg-red-500 text-white p-4 rounded font-medium"
+            >
+              Get Started
+            </Link>
+          )}
         </div>
-        <div className="absolute top-[10%] right-[10%]">
+        {/* <div className="absolute top-10 h-full w-full pr-10 ">
           <Bot />
-        </div>
+        </div> */}
+        {!showBot && (
+          <div className="absolute right-0 top-[15%]  transform -translate-y-1/2">
+            <img
+              src={bot}
+              alt="Bot"
+              className="cursor-pointer h-32 pr-20"
+              onClick={() => setShowBot(!showBot)}
+            />
+          </div>
+        )}
+
+        {showBot && <Bot setShowBot={setShowBot} showBot={showBot} />}
       </div>
 
       <div className="season-view grid  grid-rows-1 grid-cols-3  mt-10 m-2 p-5">
@@ -114,7 +134,7 @@ export default function Home() {
             Maximize Your Harvest: Essential Summer Fruits & Vegetables -
             Emphasizes abundance and profit potential.
           </h1>
-          <p className="mt-3 text-xl hover:text-[#e7e2e7ee] text-gray-800">
+          <p className="mt-3 text-xl  text-[#e7e2e7ee]">
             Embrace the abundance of summer with our essential guide to the
             season's most profitable fruits and vegetables! Discover varieties
             that thrive in the heat and are in high demand at markets. We'll
@@ -143,7 +163,7 @@ export default function Home() {
             Unlock Winter Flavor: Profitable Crops for Farmers & Freshness for
             All
           </h1>
-          <p className="mt-3 text-xl hover:text-[#e7e2e7ee] text-gray-800">
+          <p className="mt-3 text-xl  text-[#e7e2e7ee]">
             Say goodbye to boring winter meals! This guide will show you which
             winter crops bring in the most profit. You'll learn how to grow
             strong, healthy vegetables even in the cold and meet the demand for

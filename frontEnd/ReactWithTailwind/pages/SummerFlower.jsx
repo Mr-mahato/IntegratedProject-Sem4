@@ -9,6 +9,7 @@ export default function SummerFlower() {
     const getFlower = async () => {
       try {
         const summerFlower = await axios.get("/api/flower");
+        console.log(summerFlower.data)
         setFlower(summerFlower.data);
       } catch (error) {
         console.log(error);
@@ -26,7 +27,7 @@ export default function SummerFlower() {
     return false;
   }).map((val) => {
     return (
-      <Link to={`/summer/flower/${val.name}`}>
+      <Link to={`/summer/flower/${val._id}`}>
       <div
         key={val.name}
         className="max-w-md rounded-lg cursor-pointer shadow-md bg-white p-4"
