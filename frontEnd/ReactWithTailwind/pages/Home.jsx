@@ -55,6 +55,7 @@ export default function Home() {
       </div>
 
       <div className="season-view grid  grid-rows-1 grid-cols-3  mt-10 m-2 p-5">
+        
         {/* image ->> Summer section */}
         <Link to={"/summer"}>
           <div className="border h-full mx-2  rounded-md cursor-pointer overflow-hidden shadow-lg transform transition-all duration-500 hover:scale-105">
@@ -76,7 +77,7 @@ export default function Home() {
         </Link>
 
         {/* image ->> winter section */}
-
+        <Link to={"/winter"}>
         <div className="border mx-2 rounded-md cursor-pointer overflow-hidden shadow-lg transform transition-all duration-500 hover:scale-105">
           <img
             src={
@@ -93,6 +94,7 @@ export default function Home() {
             </p>
           </div>
         </div>
+        </Link>
 
         {/* image ->> Rainy section */}
         <div className="border h-full mx-2 rounded-md cursor-pointer overflow-hidden shadow-lg transform transition-all duration-500 hover:scale-105">

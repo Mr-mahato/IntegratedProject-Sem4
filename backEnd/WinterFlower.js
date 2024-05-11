@@ -1,0 +1,234 @@
+[
+    {
+        "name": "Pansy",
+        "description": "Pansies are colorful flowers with delicate petals that often feature a 'face' with contrasting colors. They belong to the Violaceae family and are known for their ability to bloom in cooler temperatures.",
+        "uses": "Commonly used in garden beds, borders, containers, and hanging baskets to add color during the fall, winter, and early spring months.",
+        "imageUrl": "https://images.pexels.com/photos/5801529/pexels-photo-5801529.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "details": "Pansies come in a wide range of colors, including purple, yellow, white, and orange. They have a short growing season but can reseed themselves if allowed to go to seed.",
+        "water": "Require regular watering, keeping the soil evenly moist but not waterlogged.",
+        "sunlight": "Prefer full sun to partial shade.",
+        "soil": "Well-draining, fertile soil with a slightly acidic to neutral pH.",
+        "season": "Cool seasons, fall, winter, and early spring."
+    },
+    {
+        "name": "Camellia",
+        "description": "Camellias are evergreen shrubs or small trees known for their glossy, dark green foliage and showy, waxy flowers. They belong to the Theaceae family and are native to Asia.",
+        "uses": "Often grown as ornamental plants in gardens and landscapes for their beautiful flowers and foliage. Camellias are also used for tea production, particularly Camellia sinensis.",
+        "imageUrl": "https://images.pexels.com/photos/5780705/pexels-photo-5780705.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "details": "Camellias produce flowers in various colors, including white, pink, red, and sometimes yellow. They bloom in late winter to early spring, depending on the variety.",
+        "water": "Require regular watering, keeping the soil consistently moist but not waterlogged.",
+        "sunlight": "Prefer partial shade, especially in hot climates.",
+        "soil": "Well-draining, acidic soil rich in organic matter.",
+        "season": "Late winter to early spring."
+    },
+    {
+        "name": "Cyclamen",
+        "description": "Cyclamens are herbaceous perennial plants known for their distinctive, upswept petals and attractive marbled foliage. They belong to the Primulaceae family and are native to Europe and the Mediterranean region.",
+        "uses": "Commonly grown as ornamental plants for indoor decoration, as well as in gardens and landscapes.",
+        "imageUrl": "https://images.pexels.com/photos/15524379/pexels-photo-15524379/free-photo-of-close-up-of-delicate-white-wildflowers.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "details": "Cyclamens produce colorful flowers in shades of pink, red, purple, and white. They bloom from late winter to spring, and some varieties can bloom again in the fall.",
+        "water": "Require regular watering, allowing the soil to dry slightly between waterings.",
+        "sunlight": "Prefer bright, indirect light.",
+        "soil": "Well-draining, slightly acidic soil rich in organic matter.",
+        "season": "Late winter to spring, with some varieties blooming in fall."
+    },
+    {
+        "name": "Hellebore",
+        "description": "Hellebores, also known as Lenten roses or Christmas roses, are perennial flowering plants known for their early bloom and shade tolerance. They belong to the Ranunculaceae family and are native to Europe and Asia.",
+        "uses": "Grown as ornamental plants in gardens and landscapes, particularly for their early bloom and evergreen foliage.",
+        "imageUrl": "https://images.pexels.com/photos/6580045/pexels-photo-6580045.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "details": "Hellebores produce cup-shaped flowers in shades of white, pink, purple, green, and burgundy. They bloom from late winter to early spring and have leathery, serrated leaves.",
+        "water": "Moderate watering, allowing the soil to dry slightly between waterings.",
+        "sunlight": "Prefer partial to full shade, especially in hot climates.",
+        "soil": "Well-draining, humus-rich soil.",
+        "season": "Late winter to early spring."
+    },
+    {
+        "name": "Snowdrops",
+        "description": "Snowdrops are bulbous perennial plants known for their delicate, nodding white flowers that bloom in late winter to early spring. They belong to the Amaryllidaceae family and are native to Europe and Asia.",
+        "uses": "Grown as ornamental plants in gardens and landscapes for their early bloom and charming appearance. They are also symbolic of hope and rebirth.",
+        "imageUrl": "https://images.pexels.com/photos/709685/pexels-photo-709685.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "details": "Snowdrops typically have drooping, bell-shaped flowers with six white tepals. They emerge from the ground in late winter, often pushing through snow.",
+        "water": "Require moderate watering, keeping the soil consistently moist during the growing season.",
+        "sunlight": "Prefer partial shade to full shade.",
+        "soil": "Well-draining soil enriched with organic matter.",
+        "season": "Late winter to early spring."
+    },
+    {
+        "name": "Viola",
+        "description": "Violas are flowering plants in the Violaceae family, closely related to pansies. They are known for their small, colorful flowers and heart-shaped leaves.",
+        "uses": "Commonly used in gardens, landscapes, and containers as bedding plants, borders, or edging. Violas are also edible and used as garnishes in culinary dishes.",
+        "imageUrl": "https://images.pexels.com/photos/12701849/pexels-photo-12701849.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "details": "Violas produce small flowers in a wide range of colors, including purple, yellow, white, and blue. They have a compact growth habit and can bloom throughout the year.",
+        "water": "Require regular watering, keeping the soil consistently moist but not waterlogged.",
+        "sunlight": "Prefer full sun to partial shade.",
+        "soil": "Well-draining, fertile soil with a slightly acidic to neutral pH.",
+        "season": "Year-round, depending on the climate."
+    },
+    {
+        "name": "Calendula",
+        "description": "Calendula, also known as pot marigold, is an annual flowering plant in the Asteraceae family. It is prized for its bright, daisy-like flowers and medicinal properties.",
+        "uses": "Grown as ornamental plants in gardens and landscapes, as well as for culinary and medicinal purposes. Calendula flowers are also used in herbal teas, oils, and salves.",
+        "imageUrl": "https://images.pexels.com/photos/65255/butterfly-yellow-insect-nature-65255.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "details": "Calendula flowers come in shades of yellow and orange, with single or double blooms. They have a spicy aroma and bloom profusely from spring to fall.",
+        "water": "Require moderate watering, allowing the soil to dry slightly between waterings.",
+        "sunlight": "Prefer full sun to partial shade.",
+        "soil": "Well-draining soil of moderate fertility.",
+        "season": "Spring to fall."
+    },
+    {
+        "name": "Primrose",
+        "description": "Primroses are herbaceous perennial plants known for their colorful flowers and rosette of basal leaves. They belong to the Primulaceae family and are native to temperate regions of the Northern Hemisphere.",
+        "uses": "Grown as ornamental plants in gardens, landscapes, and containers. Primroses are also used in traditional medicine and herbal remedies.",
+        "imageUrl": "https://images.pexels.com/photos/7141247/pexels-photo-7141247.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "details": "Primroses produce flowers in various colors, including pink, purple, yellow, white, and red. They bloom in spring and have a low, mounding growth habit.",
+        "water": "Require moderate watering, keeping the soil consistently moist but not waterlogged.",
+        "sunlight": "Prefer partial shade to full shade.",
+        "soil": "Moist, well-draining soil rich in organic matter.",
+        "season": "Spring."
+    },
+    {
+        "name": "Crocus",
+        "description": "Crocus is a genus of flowering plants in the Iridaceae family, known for its cup-shaped flowers that bloom in late winter to early spring. They are native to Europe, North Africa, and Asia.",
+        "uses": "Grown as ornamental plants in gardens and landscapes for their early bloom and vibrant flowers. Crocuses are also used for naturalizing in lawns and under trees.",
+        "imageUrl": "https://images.pexels.com/photos/1070321/pexels-photo-1070321.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "details": "Crocus flowers come in various colors, including purple, yellow, white, and striped varieties. They have grass-like foliage and grow from corms, blooming in spring.",
+        "water": "Require moderate watering, allowing the soil to dry slightly between waterings.",
+        "sunlight": "Prefer full sun to partial shade.",
+        "soil": "Well-draining soil with good fertility.",
+        "season": "Late winter to early spring."
+    },
+    {
+        "name": "Daphne",
+        "description": "Daphne is a genus of flowering shrubs known for their fragrant flowers and glossy foliage. They belong to the Thymelaeaceae family and are native to Asia, Europe, and North Africa.",
+        "uses": "Grown as ornamental shrubs in gardens and landscapes for their fragrant flowers and evergreen foliage. Daphnes are also used in traditional medicine.",
+        "imageUrl": "https://images.pexels.com/photos/16565625/pexels-photo-16565625/free-photo-of-brenthis-daphne-sitting-on-flowers.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "details": "Daphne flowers are small, tubular, and highly fragrant, ranging in color from white to pink. They bloom in late winter to early spring and are followed by red or black berries.",
+        "water": "Require regular watering, keeping the soil consistently moist but not waterlogged.",
+        "sunlight": "Prefer partial shade to full sun.",
+        "soil": "Well-draining, fertile soil with good organic content.",
+        "season": "Late winter to early spring."
+    },
+    {
+        "name": "Petunia",
+        "description": "Petunias are flowering plants in the Solanaceae family, known for their trumpet-shaped flowers and trailing or upright growth habit. They are native to South America.",
+        "uses": "Commonly grown as ornamental plants in gardens, landscapes, containers, and hanging baskets for their colorful flowers and versatility.",
+        "imageUrl": "https://images.pexels.com/photos/1414042/pexels-photo-1414042.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "details": "Petunias produce flowers in a wide range of colors, including purple, pink, red, white, and yellow. They bloom from spring to fall and have a compact growth habit.",
+        "water": "Require regular watering, keeping the soil consistently moist but not waterlogged.",
+        "sunlight": "Prefer full sun to partial shade.",
+        "soil": "Well-draining, fertile soil with good organic content.",
+        "season": "Spring to fall."
+    },
+    {
+        "name": "Winterberry",
+        "description": "Winterberry is a deciduous shrub known for its bright red berries that persist into winter, providing food for birds. It belongs to the Aquifoliaceae family and is native to eastern North America.",
+        "uses": "Grown as ornamental shrubs in gardens and landscapes for their colorful berries and winter interest. Winterberries are also used in holiday decorations.",
+        "imageUrl": "https://images.pexels.com/photos/9886684/pexels-photo-9886684.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "details": "Winterberry produces bright red berries on bare branches in late fall to winter, providing a striking contrast against the snow. Female plants require a male pollinator for fruit set.",
+        "water": "Require regular watering, particularly during dry periods.",
+        "sunlight": "Prefer full sun to partial shade.",
+        "soil": "Moist, well-draining soil, but tolerant of wet conditions.",
+        "season": "Late fall to winter."
+    },
+    {
+        "name": "Mahonia",
+        "description": "Mahonia is a genus of evergreen shrubs known for their spiny leaves, fragrant flowers, and clusters of blue-black berries. They belong to the Berberidaceae family and are native to Asia and North America.",
+        "uses": "Grown as ornamental shrubs in gardens and landscapes for their architectural foliage, colorful berries, and winter interest.",
+        "imageUrl": "https://images.pexels.com/photos/5499576/pexels-photo-5499576.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "details": "Mahonia shrubs have spiny, holly-like leaves and produce fragrant, yellow flowers in late winter to early spring. The flowers are followed by clusters of blue-black berries.",
+        "water": "Require moderate watering, particularly during dry periods.",
+        "sunlight": "Prefer partial shade to full sun.",
+        "soil": "Well-draining soil with good fertility.",
+        "season": "Late winter to early spring."
+    },
+    {
+        "name": "Japanese Andromeda",
+        "description": "Japanese andromeda, also known as Pieris japonica, is an evergreen shrub known for its clusters of bell-shaped flowers and colorful foliage. It belongs to the Ericaceae family and is native to eastern Asia.",
+        "uses": "Grown as ornamental shrubs in gardens and landscapes for their attractive foliage, flowers, and winter interest.",
+        "imageUrl": "https://images.pexels.com/photos/7487331/pexels-photo-7487331.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "details": "Japanese andromeda produces pendulous clusters of small, bell-shaped flowers in shades of white, pink, or red. The flowers appear in early spring, followed by colorful new foliage.",
+        "water": "Require regular watering, particularly during dry periods.",
+        "sunlight": "Prefer partial shade to full sun.",
+        "soil": "Well-draining, acidic soil rich in organic matter.",
+        "season": "Spring."
+    },
+    {
+        "name": "Winter Aconite",
+        "description": "Winter aconite is a perennial flowering plant known for its bright yellow flowers that bloom in late winter to early spring. It belongs to the Ranunculaceae family and is native to Europe.",
+        "uses": "Grown as ornamental plants in gardens and landscapes for their early bloom and cheerful flowers. Winter aconites are also used in naturalizing under trees and in woodland gardens.",
+        "imageUrl": "https://media.gettyimages.com/id/1213229758/photo/germany-saxony-anhalt-winter-aconites-and-buttercups-in-spring.jpg?s=612x612&w=0&k=20&c=JB0hZIpCQFdjR6Wn5Usza5hdS-qynGTWgAppAmg8Opk=",
+        "details": "Winter aconite produces bright yellow, cup-shaped flowers on short stems. The flowers emerge from the ground before the foliage and can naturalize in moist, shady areas.",
+        "water": "Require regular watering, particularly during dry periods.",
+        "sunlight": "Prefer partial shade to full sun.",
+        "soil": "Moist, well-draining soil rich in organic matter.",
+        "season": "Late winter to early spring."
+    },
+    {
+        "name": "Daffodil",
+        "description": "Daffodil, also known as narcissus or jonquil, is a genus of flowering bulbs known for their trumpet-shaped flowers and distinctive scent. They belong to the Amaryllidaceae family and are native to Europe and North Africa.",
+        "uses": "Grown as ornamental plants in gardens, landscapes, and containers for their cheerful flowers and early bloom. Daffodils are also used in cut flower arrangements.",
+        "imageUrl": "https://images.pexels.com/photos/1009681/pexels-photo-1009681.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "details": "Daffodils produce trumpet-shaped flowers in various colors, including yellow, white, orange, and pink. They bloom in spring and have strap-like leaves.",
+        "water": "Require moderate watering, keeping the soil consistently moist during the growing season.",
+        "sunlight": "Prefer full sun to partial shade.",
+        "soil": "Well-draining soil enriched with organic matter.",
+        "season": "Spring."
+    },
+    {
+        "name": "Marigold",
+        "description": "Marigold is a genus of flowering plants in the Asteraceae family, known for their bright, daisy-like flowers and aromatic foliage. They are native to the Americas and Africa.",
+        "uses": "Commonly grown as ornamental plants in gardens, landscapes, and containers for their cheerful flowers and pest-repelling properties. Marigolds are also used in companion planting and herbal medicine.",
+        "imageUrl": "https://media.gettyimages.com/id/1282217573/photo/flowerbed-of-marigolds-in-bloom.jpg?s=612x612&w=0&k=20&c=d6ZMq-X2na7CxVhoxuDW3QBQJWsdlsT88cZgZggkyHM=",
+        "details": "Marigolds produce flowers in shades of yellow, orange, and red, with single or double blooms. They bloom from spring to fall and have a bushy growth habit.",
+        "water": "Require moderate watering, allowing the soil to dry slightly between waterings.",
+        "sunlight": "Prefer full sun to partial shade.",
+        "soil": "Well-draining soil of moderate fertility.",
+        "season": "Spring to fall."
+    },
+    {
+        "name": "Winter Heath",
+        "description": "Winter heath, also known as Erica, is a genus of flowering plants in the Ericaceae family, known for their small, bell-shaped flowers and evergreen foliage. They are native to Europe and South Africa.",
+        "uses": "Grown as ornamental plants in gardens, landscapes, and containers for their colorful flowers and winter interest. Winter heaths are also used in rock gardens and as ground covers.",
+        "imageUrl": "https://media.gettyimages.com/id/1340320025/photo/heather.jpg?s=612x612&w=0&k=20&c=P6CtTF2zArcDhAH9FTlT5L_JaqdqpdDw3B8OlE3tagQ=",
+        "details": "Winter heaths produce small, bell-shaped flowers in shades of white, pink, purple, and red. They bloom in late winter to early spring and have a low, spreading growth habit.",
+        "water": "Require regular watering, particularly during dry periods.",
+        "sunlight": "Prefer full sun to partial shade.",
+        "soil": "Well-draining, acidic soil rich in organic matter.",
+        "season": "Late winter to early spring."
+    },
+    {
+        "name": "Iris",
+        "description": "Iris is a genus of perennial flowering plants known for their showy flowers and sword-shaped leaves. They belong to the Iridaceae family and are native to Europe, Asia, and North America.",
+        "uses": "Grown as ornamental plants in gardens, landscapes, and containers for their colorful flowers and architectural foliage. Irises are also used in cut flower arrangements.",
+        "imageUrl": "https://images.pexels.com/photos/2471455/pexels-photo-2471455.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "details": "Irises produce flowers in various colors, including purple, blue, yellow, white, and bi-colors. They have a unique form with three upright petals called standards and three drooping petals called falls.",
+        "water": "Require regular watering, particularly during dry periods.",
+        "sunlight": "Prefer full sun to partial shade.",
+        "soil": "Well-draining soil with good fertility.",
+        "season": "Spring to early summer."
+    },
+    {
+        "name": "Rose",
+        "description": "Roses are woody perennial flowering plants known for their fragrant flowers and thorny stems. They belong to the Rosaceae family and are native to Asia, Europe, and North America.",
+        "uses": "Grown as ornamental plants in gardens, landscapes, and containers for their beautiful flowers and romantic symbolism. Roses are also used in cut flower arrangements, perfumes, and herbal medicine.",
+        "imageUrl": "https://images.pexels.com/photos/1212823/pexels-photo-1212823.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "details": "Roses produce flowers in a wide range of colors, shapes, and sizes, including single, semi-double, double, and ruffled blooms. They bloom from spring to fall and have a variety of growth habits.",
+        "water": "Require regular watering, particularly during dry periods.",
+        "sunlight": "Prefer full sun to partial shade.",
+        "soil": "Well-draining soil with good fertility.",
+        "season": "Spring to fall."
+    },
+    {
+        "name": "Alyssum",
+        "description": "Alyssum is a genus of flowering plants in the Brassicaceae family, known for their small, fragrant flowers and spreading growth habit. They are native to Europe, Asia, and northern Africa.",
+        "uses": "Grown as ornamental plants in gardens, landscapes, and containers for their delicate flowers and attractive foliage. Alyssums are also used as ground covers and in rock gardens.",
+        "imageUrl": "https://images.pexels.com/photos/4029192/pexels-photo-4029192.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "details": "Alyssum flowers come in shades of white, pink, purple, and yellow, with tiny, four-petaled blooms. They bloom from spring to fall and have a low, spreading growth habit.",
+        "water": "Require regular watering, particularly during dry periods.",
+        "sunlight": "Prefer full sun to partial shade.",
+        "soil": "Well-draining soil of moderate fertility.",
+        "season": "Spring to fall."
+    }
+
+]

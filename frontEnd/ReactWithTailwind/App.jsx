@@ -8,6 +8,12 @@ import SummerVegetable from "./pages/SummerVegetable";
 import SummerFruits from "./pages/SummerFruits";
 import SummerFlower from "./pages/SummerFlower";
 import ShowSummerItem from "./pages/ShowSummerItem";
+import Winter from "./pages/Winter";
+import WinterLayout from "./layout/WinterLayout"
+import ShowWinterItem from "./pages/ShowWinterItem";
+import WinterVegetable from "./pages/WinterVegetable"
+import WinterFruits from "./pages/WinterFruits";
+import WinterFlower from "./pages/WinterFlowers";
 import Signup from "./pages/Signup";
 import Login from "./pages/Login";
 import { SessionProvider } from "./context/Session";
@@ -57,7 +63,34 @@ export default function App() {
               element={<ShowSummerItem fn="flower" FN="id" />}
             />
           </Route>
-          <Route path="/" element={<SummerLayout />}>
+          
+          <Route>
+          <Route path="/winter" element={<WinterLayout />}>
+            <Route path="/winter" element={<Winter />} />
+            <Route
+              path="/winter/vegetable"
+              element={<WinterVegetable header="vegetable" />}
+            />
+            {/* this will show the vegetable */}
+            <Route
+              path="/winter/vegetable/:vegetableName"
+              element={<ShowWinterItem fn="vegetable" FN="vegetableName" />}
+            />
+            <Route path="/winter/fruit" element={<WinterFruits />} />
+            {/* this will show the fruit */}
+            <Route
+              path="/winter/fruit/:fruitName"
+              element={<ShowSummerItem fn="fruit" FN="fruitName" />}
+            />
+            <Route path="/winter/flower" element={<WinterFlower />} />
+            {/* this will show the flower */}
+            <Route
+              path="/winter/flower/:id"
+              element={<ShowWinterItem fn="flower" FN="id" />}
+            />
+          </Route> 
+
+
           <Route
               path="/search/:id"
               element={<SearchView />}

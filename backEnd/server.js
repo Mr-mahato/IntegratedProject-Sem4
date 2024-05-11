@@ -19,6 +19,16 @@ app.get("/api/summerVegetable", (req, res) => {
     })
     .catch((err) => console.log("err"));
 });
+app.get("/api/winterVegetable", (req, res) => {
+  dbName
+    .collection("wintervegetable")
+    .find({})
+    .toArray()
+    .then((data) => {
+      if (data) res.send(data);
+    })
+    .catch((err) => console.log("err"));
+});
 
 // Access your API key as an environment variable (see "Set up your API key" above)
 const genAI = new GoogleGenerativeAI(process.env.API_URL);
@@ -177,6 +187,14 @@ app.get("/api/vegetable/:id", (req, res) => {
       if (val) res.send(val);
       else console.log("not found");
     })
+    dbName
+    .collection("wintervegetable")
+    .findOne({ _id: o_id })
+    .then((val) => {
+      console.log(id);
+      if (val) res.send(val);
+      else console.log("not found");
+    })
     .catch((err) => {
       res.send(err);
     });
@@ -192,6 +210,16 @@ app.get("/api/summerFruit", (req, res) => {
     })
     .catch((err) => console.log("err"));
 });
+app.get("/api/winterFruit", (req, res) => {
+  dbName
+    .collection("winterfruits")
+    .find({})
+    .toArray()
+    .then((data) => {
+      if (data) res.send(data);
+    })
+    .catch((err) => console.log("err"));
+});
 
 app.get("/api/fruit/:id", (req, res) => {
   const { id } = req.params;
@@ -199,6 +227,14 @@ app.get("/api/fruit/:id", (req, res) => {
   let o_id = new ObjectId(id);
   dbName
     .collection("Fruits")
+    .findOne({ _id: o_id })
+    .then((val) => {
+      console.log(id);
+      if (val) res.send(val);
+      else console.log("not found");
+    })
+    dbName
+    .collection("winterfruits")
     .findOne({ _id: o_id })
     .then((val) => {
       console.log(id);
@@ -220,6 +256,16 @@ app.get("/api/flower", (req, res) => {
     })
     .catch((err) => console.log("err"));
 });
+app.get("/api/winterFlower", (req, res) => {
+  dbName
+    .collection("winterflowers")
+    .find({})
+    .toArray()
+    .then((data) => {
+      if (data) res.send(data);
+    })
+    .catch((err) => console.log("err"));
+});
 
 app.get("/api/flower/:id", (req, res) => {
   const { id } = req.params;
@@ -227,6 +273,14 @@ app.get("/api/flower/:id", (req, res) => {
   let o_id = new ObjectId(id);
   dbName
     .collection("Flower")
+    .findOne({ _id: o_id })
+    .then((val) => {
+      console.log(id);
+      if (val) res.send(val);
+      else console.log("not found");
+    })
+    dbName
+    .collection("winterflowers")
     .findOne({ _id: o_id })
     .then((val) => {
       console.log(id);
