@@ -41,7 +41,7 @@ export default function Home() {
           <Bot />
         </div> */}
         {!showBot && (
-          <div className="absolute right-0 top-[15%]  transform -translate-y-1/2">
+          <div className="absolute right-0 top-[22%]  transform -translate-y-1/2">
             <img
               src={bot}
               alt="Bot"
@@ -94,7 +94,9 @@ export default function Home() {
           </div>
         </div>
        </Link>
+
         {/* image ->> Rainy section */}
+        <Link to={"/rainy"}>
         <div className="border h-full mx-2 rounded-md cursor-pointer overflow-hidden shadow-lg transform transition-all duration-500 hover:scale-105">
           <img
             src={
@@ -112,6 +114,7 @@ export default function Home() {
             </p>
           </div>
         </div>
+      </Link>
       </div>
 
       {/* image ->> below section */}
