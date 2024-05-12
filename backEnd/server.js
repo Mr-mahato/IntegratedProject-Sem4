@@ -5,20 +5,12 @@ const app = express();
 const fs = require("fs");
 const bodyParser = require("body-parser");
 const port = 3500;
+const path=require('path');
 app.use(bodyParser.json());
 const { connectDb, dbName } = require("./DbConn");
 const { ObjectId } = require("mongodb");
 connectDb();
-app.get("/api/summerVegetable", (req, res) => {
-  dbName
-    .collection("Vegetable")
-    .find({})
-    .toArray()
-    .then((data) => {
-      if (data) res.send(data);
-    })
-    .catch((err) => console.log("err"));
-});
+
 
 // Access your API key as an environment variable (see "Set up your API key" above)
 const genAI = new GoogleGenerativeAI(process.env.API_URL);
@@ -108,9 +100,10 @@ app.delete("/api/deleteMod/:email", (req, res) => {
   });
 });
 
+const file=path.join(__dirname,"/user.json");
 app.post("/api/login", (req, res) => {
   const userData = req.body;
-  fs.readFile("user.json", "utf-8", (err, data) => {
+  fs.readFile(file, "utf-8", (err, data) => {
     if (err) res.send({ status: false });
     data = JSON.parse(data);
     const user = data.find((val) => val.email == userData.email);
@@ -165,6 +158,41 @@ app.post("/api/query", (req, res) => {
   });
 });
 
+
+//Vegetable Section
+app.get("/api/summerVegetable", (req, res) => {
+  dbName
+    .collection("Vegetable")
+    .find({})
+    .toArray()
+    .then((data) => {
+      if (data) res.send(data);
+    })
+    .catch((err) => console.log("err"));
+});
+app.get("/api/winterVegetable", (req, res) => {
+  dbName
+    .collection("wintervegetable")
+    .find({})
+    .toArray()
+    .then((data) => {
+      if (data) res.send(data);
+    })
+    .catch((err) => console.log("err"));
+});
+app.get("/api/rainyVegetable", (req, res) => {
+  dbName
+    .collection("Rainyvegetable")
+    .find({})
+    .toArray()
+    .then((data) => {
+      if (data) res.send(data);
+    })
+    .catch((err) => console.log("err"));
+});
+
+
+//Finding the vegetable in the collection
 app.get("/api/vegetable/:id", (req, res) => {
   const { id } = req.params;
   console.log(id);
@@ -177,11 +205,29 @@ app.get("/api/vegetable/:id", (req, res) => {
       if (val) res.send(val);
       else console.log("not found");
     })
+    dbName
+    .collection("wintervegetable")
+    .findOne({ _id: o_id })
+    .then((val) => {
+      console.log(id);
+      if (val) res.send(val);
+      else console.log("not found");
+    })
+    dbName
+    .collection("Rainyvegetable")
+    .findOne({ _id: o_id })
+    .then((val) => {
+      console.log(id);
+      if (val) res.send(val);
+      else console.log("not found");
+    })
     .catch((err) => {
       res.send(err);
     });
 });
 
+
+//Fruit Section
 app.get("/api/summerFruit", (req, res) => {
   dbName
     .collection("Fruits")
@@ -192,7 +238,28 @@ app.get("/api/summerFruit", (req, res) => {
     })
     .catch((err) => console.log("err"));
 });
+app.get("/api/winterFruit", (req, res) => {
+  dbName
+    .collection("winterfruits")
+    .find({})
+    .toArray()
+    .then((data) => {
+      if (data) res.send(data);
+    })
+    .catch((err) => console.log("err"));
+});
+app.get("/api/rainyFruit", (req, res) => {
+  dbName
+    .collection("Rainyfruits")
+    .find({})
+    .toArray()
+    .then((data) => {
+      if (data) res.send(data);
+    })
+    .catch((err) => console.log("err"));
+});
 
+//Finding Fruit in the collection
 app.get("/api/fruit/:id", (req, res) => {
   const { id } = req.params;
   console.log(id);
@@ -205,11 +272,29 @@ app.get("/api/fruit/:id", (req, res) => {
       if (val) res.send(val);
       else console.log("not found");
     })
+    dbName
+    .collection("winterfruits")
+    .findOne({ _id: o_id })
+    .then((val) => {
+      console.log(id);
+      if (val) res.send(val);
+      else console.log("not found");
+    })
+    dbName
+    .collection("Rainyfruits")
+    .findOne({ _id: o_id })
+    .then((val) => {
+      console.log(id);
+      if (val) res.send(val);
+      else console.log("not found");
+    })
     .catch((err) => {
       res.send(err);
     });
 });
 
+
+//Flower Section 
 app.get("/api/flower", (req, res) => {
   dbName
     .collection("Flower")
@@ -220,13 +305,51 @@ app.get("/api/flower", (req, res) => {
     })
     .catch((err) => console.log("err"));
 });
+app.get("/api/winterFlower", (req, res) => {
+  dbName
+    .collection("winterflowers")
+    .find({})
+    .toArray()
+    .then((data) => {
+      if (data) res.send(data);
+    })
+    .catch((err) => console.log("err"));
+});
+app.get("/api/rainyFlower", (req, res) => {
+  dbName
+    .collection("Rainyflower")
+    .find({})
+    .toArray()
+    .then((data) => {
+      if (data) res.send(data);
+    })
+    .catch((err) => console.log("err"));
+});
 
+
+//Flower finding in the collection
 app.get("/api/flower/:id", (req, res) => {
   const { id } = req.params;
   console.log(id);
   let o_id = new ObjectId(id);
   dbName
     .collection("Flower")
+    .findOne({ _id: o_id })
+    .then((val) => {
+      console.log(id);
+      if (val) res.send(val);
+      else console.log("not found");
+    })
+    dbName
+    .collection("winterflowers")
+    .findOne({ _id: o_id })
+    .then((val) => {
+      console.log(id);
+      if (val) res.send(val);
+      else console.log("not found");
+    })
+    dbName
+    .collection("Rainyflower")
     .findOne({ _id: o_id })
     .then((val) => {
       console.log(id);
