@@ -41,7 +41,7 @@ export default function Home() {
           <Bot />
         </div> */}
         {!showBot && (
-          <div className="absolute right-0 top-[22%]  transform -translate-y-1/2">
+          <div className="absolute right-0 top-[20%]  transform -translate-y-1/2">
             <img
               src={bot}
               alt="Bot"
