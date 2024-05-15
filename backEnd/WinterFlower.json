@@ -8,6 +8,7 @@
         "water": "Require regular watering, keeping the soil evenly moist but not waterlogged.",
         "sunlight": "Prefer full sun to partial shade.",
         "soil": "Well-draining, fertile soil with a slightly acidic to neutral pH.",
+        "cultivation": "Plant pansies in early fall or late summer in a location with well-draining soil. Ensure they receive adequate sunlight, and water regularly, especially during dry periods. Deadhead spent flowers to encourage continuous blooming.",
         "season": "Cool seasons, fall, winter, and early spring."
     },
     {
@@ -19,6 +20,7 @@
         "water": "Require regular watering, keeping the soil consistently moist but not waterlogged.",
         "sunlight": "Prefer partial shade, especially in hot climates.",
         "soil": "Well-draining, acidic soil rich in organic matter.",
+        "cultivation": "Plant camellias in well-draining, acidic soil with plenty of organic matter. Provide them with partial shade, especially during hot summers. Water consistently to keep the soil moist but not waterlogged. Mulch around the base of the plant to retain moisture and suppress weeds.",
         "season": "Late winter to early spring."
     },
     {
@@ -30,6 +32,7 @@
         "water": "Require regular watering, allowing the soil to dry slightly between waterings.",
         "sunlight": "Prefer bright, indirect light.",
         "soil": "Well-draining, slightly acidic soil rich in organic matter.",
+        "cultivation": "Plant cyclamens in a well-draining, slightly acidic soil mix with good organic content. Place them in bright, indirect light, such as near a north-facing window indoors or under dappled shade outdoors. Water regularly, allowing the soil to dry slightly between waterings. Avoid overhead watering to prevent rotting of the corm.",
         "season": "Late winter to spring, with some varieties blooming in fall."
     },
     {
@@ -41,6 +44,7 @@
         "water": "Moderate watering, allowing the soil to dry slightly between waterings.",
         "sunlight": "Prefer partial to full shade, especially in hot climates.",
         "soil": "Well-draining, humus-rich soil.",
+        "cultivation": "Plant hellebores in well-draining, humus-rich soil in partial to full shade. Water moderately, allowing the soil to dry slightly between waterings. Mulch around the base of the plant to retain moisture and suppress weeds. Prune old or damaged leaves in late winter to tidy up the plant.",
         "season": "Late winter to early spring."
     },
     {
@@ -52,6 +56,7 @@
         "water": "Require moderate watering, keeping the soil consistently moist during the growing season.",
         "sunlight": "Prefer partial shade to full shade.",
         "soil": "Well-draining soil enriched with organic matter.",
+        "cultivation": "Plant snowdrops in moist, well-draining soil enriched with organic matter. They prefer partial shade to full shade, especially in warmer climates. Water regularly during the growing season, but reduce watering after the foliage dies back. Allow the foliage to wither naturally before removing.",
         "season": "Late winter to early spring."
     },
     {
@@ -63,6 +68,7 @@
         "water": "Require regular watering, keeping the soil consistently moist but not waterlogged.",
         "sunlight": "Prefer full sun to partial shade.",
         "soil": "Well-draining, fertile soil with a slightly acidic to neutral pH.",
+        "cultivation": "Plant violas in well-draining, fertile soil with a slightly acidic to neutral pH. They prefer full sun to partial shade. Water regularly to keep the soil consistently moist, especially during dry periods. Deadhead spent flowers to encourage continuous blooming.",
         "season": "Year-round, depending on the climate."
     },
     {
@@ -74,6 +80,7 @@
         "water": "Require moderate watering, allowing the soil to dry slightly between waterings.",
         "sunlight": "Prefer full sun to partial shade.",
         "soil": "Well-draining soil of moderate fertility.",
+        "cultivation": "Plant calendula in well-draining soil of moderate fertility. They prefer full sun to partial shade. Water regularly, allowing the soil to dry slightly between waterings. Deadhead spent flowers to encourage continuous blooming. Provide support for taller varieties to prevent them from flopping over.",
         "season": "Spring to fall."
     },
     {
@@ -85,6 +92,7 @@
         "water": "Require moderate watering, keeping the soil consistently moist but not waterlogged.",
         "sunlight": "Prefer partial shade to full shade.",
         "soil": "Moist, well-draining soil rich in organic matter.",
+        "cultivation": "Plant primroses in moist, well-draining soil rich in organic matter. They prefer partial shade to full shade, especially in warmer climates. Water regularly to keep the soil consistently moist, especially during dry periods. Deadhead spent flowers to encourage continuous blooming. Divide clumps every few years to rejuvenate the plant.",
         "season": "Spring."
     },
     {
@@ -96,6 +104,7 @@
         "water": "Require moderate watering, allowing the soil to dry slightly between waterings.",
         "sunlight": "Prefer full sun to partial shade.",
         "soil": "Well-draining soil with good fertility.",
+        "cultivation": "Plant crocuses in well-draining soil with good fertility. They prefer full sun to partial shade. Water moderately, allowing the soil to dry slightly between waterings. Plant corms in the fall, burying them 3-4 inches deep and spacing them 3-4 inches apart. Naturalize them in lawns or under trees for a naturalized look.",
         "season": "Late winter to early spring."
     },
     {
@@ -107,6 +116,7 @@
         "water": "Require regular watering, keeping the soil consistently moist but not waterlogged.",
         "sunlight": "Prefer partial shade to full sun.",
         "soil": "Well-draining, fertile soil with good organic content.",
+        "cultivation": "Plant daphnes in well-draining, fertile soil with good organic content. They prefer partial shade to full sun. Water regularly, keeping the soil consistently moist but not waterlogged. Mulch around the base of the plant to retain moisture and suppress weeds. Prune lightly after flowering to maintain shape and remove dead or damaged branches.",
         "season": "Late winter to early spring."
     },
     {
@@ -118,6 +128,7 @@
         "water": "Require regular watering, keeping the soil consistently moist but not waterlogged.",
         "sunlight": "Prefer full sun to partial shade.",
         "soil": "Well-draining, fertile soil with good organic content.",
+        "cultivation": "Plant petunias in well-draining, fertile soil with good organic content. They prefer full sun to partial shade. Water regularly, keeping the soil consistently moist but not waterlogged. Deadhead spent flowers to encourage continuous blooming. Fertilize every few weeks with a balanced fertilizer to promote healthy growth and flowering.",
         "season": "Spring to fall."
     },
     {
@@ -129,6 +140,7 @@
         "water": "Require regular watering, particularly during dry periods.",
         "sunlight": "Prefer full sun to partial shade.",
         "soil": "Moist, well-draining soil, but tolerant of wet conditions.",
+        "cultivation": "Plant winterberries in moist, well-draining soil. They prefer full sun to partial shade. Water regularly, particularly during dry periods, to keep the soil consistently moist. Prune to remove dead or damaged branches and shape the shrub. Provide a male pollinator nearby for female plants to produce berries.",
         "season": "Late fall to winter."
     },
     {
@@ -140,6 +152,7 @@
         "water": "Require moderate watering, particularly during dry periods.",
         "sunlight": "Prefer partial shade to full sun.",
         "soil": "Well-draining soil with good fertility.",
+        "cultivation": "Plant mahonias in well-draining soil with good fertility. They prefer partial shade to full sun. Water regularly, particularly during dry periods, to keep the soil consistently moist. Mulch around the base of the plant to retain moisture and suppress weeds. Prune lightly after flowering to maintain shape and remove dead or damaged branches.",
         "season": "Late winter to early spring."
     },
     {
@@ -151,6 +164,7 @@
         "water": "Require regular watering, particularly during dry periods.",
         "sunlight": "Prefer partial shade to full sun.",
         "soil": "Well-draining, acidic soil rich in organic matter.",
+        "cultivation": "Plant Japanese andromeda in well-draining, acidic soil rich in organic matter. They prefer partial shade to full sun. Water regularly, particularly during dry periods, to keep the soil consistently moist. Mulch around the base of the plant to retain moisture and suppress weeds. Prune lightly after flowering to maintain shape and remove dead or damaged branches.",
         "season": "Spring."
     },
     {
@@ -162,6 +176,7 @@
         "water": "Require regular watering, particularly during dry periods.",
         "sunlight": "Prefer partial shade to full sun.",
         "soil": "Moist, well-draining soil rich in organic matter.",
+        "cultivation": "Plant winter aconites in moist, well-draining soil enriched with organic matter. They prefer partial shade to full sun. Water regularly, particularly during dry periods, to keep the soil consistently moist. Naturalize them under trees or in woodland gardens for a naturalized look.",
         "season": "Late winter to early spring."
     },
     {
@@ -173,7 +188,8 @@
         "water": "Require moderate watering, keeping the soil consistently moist during the growing season.",
         "sunlight": "Prefer full sun to partial shade.",
         "soil": "Well-draining soil enriched with organic matter.",
-        "season": "Spring."
+        "season": "Spring.",
+        "cultivation": "Plant daffodil bulbs in the fall, about 2-4 inches deep and 4-6 inches apart. Water thoroughly after planting. Fertilize with a balanced fertilizer in early spring. Deadhead spent flowers to encourage more blooms. Allow foliage to wither naturally before cutting back."
     },
     {
         "name": "Marigold",
@@ -184,7 +200,8 @@
         "water": "Require moderate watering, allowing the soil to dry slightly between waterings.",
         "sunlight": "Prefer full sun to partial shade.",
         "soil": "Well-draining soil of moderate fertility.",
-        "season": "Spring to fall."
+        "season": "Spring to fall.",
+        "cultivation": "Plant marigold seeds directly in the garden after the last frost date. Thin seedlings to 8-10 inches apart. Water regularly, especially during dry periods. Deadhead spent flowers to prolong blooming. Pinch back leggy growth to encourage bushiness."
     },
     {
         "name": "Winter Heath",
@@ -195,7 +212,8 @@
         "water": "Require regular watering, particularly during dry periods.",
         "sunlight": "Prefer full sun to partial shade.",
         "soil": "Well-draining, acidic soil rich in organic matter.",
-        "season": "Late winter to early spring."
+        "season": "Late winter to early spring.",
+        "cultivation": "Plant winter heath in well-drained, acidic soil. Water regularly, especially during dry spells. Prune lightly after flowering to maintain shape. Apply a layer of mulch to protect roots in winter. Divide overcrowded clumps in spring."
     },
     {
         "name": "Iris",
@@ -206,7 +224,8 @@
         "water": "Require regular watering, particularly during dry periods.",
         "sunlight": "Prefer full sun to partial shade.",
         "soil": "Well-draining soil with good fertility.",
-        "season": "Spring to early summer."
+        "season": "Spring to early summer.",
+        "cultivation": "Plant iris rhizomes in late summer or early fall. Choose a sunny location with well-draining soil. Plant rhizomes just below the soil surface. Water regularly, especially during dry spells. Divide clumps every 3-4 years to maintain vigor."
     },
     {
         "name": "Rose",
@@ -217,7 +236,8 @@
         "water": "Require regular watering, particularly during dry periods.",
         "sunlight": "Prefer full sun to partial shade.",
         "soil": "Well-draining soil with good fertility.",
-        "season": "Spring to fall."
+        "season": "Spring to fall.",
+        "cultivation": "Plant roses in a sunny location with well-draining soil. Dig a hole twice as wide and deep as the root ball. Amend soil with organic matter. Water deeply after planting. Mulch to retain moisture and suppress weeds. Prune in late winter or early spring to shape and promote new growth."
     },
     {
         "name": "Alyssum",
@@ -228,7 +248,8 @@
         "water": "Require regular watering, particularly during dry periods.",
         "sunlight": "Prefer full sun to partial shade.",
         "soil": "Well-draining soil of moderate fertility.",
-        "season": "Spring to fall."
+        "season": "Spring to fall.",
+        "cultivation": "Plant alyssum seeds or transplants in well-draining soil. Water regularly, especially during dry spells. Deadhead spent flowers to encourage more blooms. Trim back leggy growth to promote bushiness. Divide overcrowded clumps every 2-3 years."
     }
 
 ]

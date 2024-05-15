@@ -8,13 +8,16 @@ import SummerVegetable from "./pages/SummerVegetable";
 import SummerFruits from "./pages/SummerFruits";
 import SummerFlower from "./pages/SummerFlower";
 import ShowSummerItem from "./pages/ShowSummerItem";
+import ShowSummerFlower from "./pages/ShowSummerFlower";
 import Winter from "./pages/Winter";
 import WinterLayout from "./layout/WinterLayout"
 import ShowWinterItem from "./pages/ShowWinterItem";
+import ShowWinterFlower from "./pages/ShowWinterFlower";
 import WinterVegetable from "./pages/WinterVegetable"
 import WinterFruits from "./pages/WinterFruits";
 import WinterFlower from "./pages/WinterFlowers";
 import ShowRainyItem from "./pages/ShowRainyItem";
+import ShowRainyFlower from "./pages/ShowRainyFlower";
 import Rainy from "./pages/Rainy";
 import RainyLayout from "./layout/RainyLayout"
 import RainyVegetable from "./pages/RainyVegetable"
@@ -67,7 +70,7 @@ export default function App() {
             {/* this will show the flower */}
             <Route
               path="/summer/flower/:id"
-              element={<ShowSummerItem fn="flower" FN="id" />}
+              element={<ShowSummerFlower fn="flower" FN="id" />}
             />
           </Route>
           
@@ -94,7 +97,7 @@ export default function App() {
             {/* this will show the flower */}
             <Route
               path="/winter/flower/:id"
-              element={<ShowWinterItem fn="flower" FN="id" />}
+              element={<ShowWinterFlower fn="flower" FN="id" />}
             />
           </Route> 
 
@@ -121,7 +124,7 @@ export default function App() {
             {/* this will show the flower */}
             <Route
               path="/rainy/flower/:id"
-              element={<ShowRainyItem fn="flower" FN="id" />}
+              element={<ShowRainyFlower fn="flower" FN="id" />}
             />
           </Route>
           
