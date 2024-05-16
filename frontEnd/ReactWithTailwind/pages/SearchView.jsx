@@ -21,6 +21,7 @@ export default function SearchView({ fn, FN }) {
 
   return (
     <div className="min-h-screen w-full    ">
+      <Header/>
       <div className=" relative border bg-[#324a34]   border-gray-200  ">
         <div className="relative">
           <img

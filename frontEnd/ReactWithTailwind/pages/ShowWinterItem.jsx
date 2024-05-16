@@ -1,14 +1,14 @@
-import React, { useEffect, useState , useContext } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import Query from "./Query";
 import { SessionContext } from "../context/Session";
-import Footer from './Footer'
-export default function ShowWinterItem({fn , FN}) {
-  const {session} = useContext(SessionContext);
+import Footer from "./Footer";
+export default function ShowWinterItem({ fn, FN }) {
+  const { session } = useContext(SessionContext);
   let name = useParams();
   name = name[`${FN}`];
-  console.log(fn , name);
+  console.log(fn, name);
   const [fruits, setParticularFruits] = useState({});
   const [isOpen, setisOpen] = useState(false);
 
@@ -25,14 +25,13 @@ export default function ShowWinterItem({fn , FN}) {
     getVegetable();
   }, []);
 
-  const handelQuery = ()=>{
+  const handelQuery = () => {
     console.log(session);
-    if(!session)
-    {
-      return alert('please logged in');
+    if (!session) {
+      return alert("please logged in");
     }
     setisOpen(!isOpen);
-  }
+  };
 
   return (
     <div className="min-h-screen w-full    ">
@@ -56,10 +55,12 @@ export default function ShowWinterItem({fn , FN}) {
               <h2 className="text-xl font-semibold mb-2">Origin</h2>
               <p>{fruits.origin}</p>
             </div>
-            <div>
-              <h2 className="text-xl font-semibold mb-2">Nutrition</h2>
-              <p>{fruits.nutrition}</p>
-            </div>
+            {fruits.nutrition ? (
+              <div>
+                <h2 className="text-xl font-semibold mb-2">Nutrition</h2>
+                <p>{fruits.nutrition}</p>
+              </div>
+            ) : null}
             <div>
               <h2 className="text-xl font-semibold mb-2">Uses</h2>
               <p>{fruits.uses}</p>
@@ -69,23 +70,25 @@ export default function ShowWinterItem({fn , FN}) {
               <p>{fruits.cultivation}</p>
             </div>
           </div>
-          <div className="mb-5">
-            <h2 className="text-xl font-semibold mb-2">Instructions</h2>
-            <p>{fruits.instructions}</p>
-          </div>
+          {fruits.instructions ? (
+            <div className="mb-5">
+              <h2 className="text-xl font-semibold mb-2">Instructions</h2>
+              <p>{fruits.instructions}</p>
+            </div>
+          ) : null}
           <div className="mb-5">
             <h2 className="text-xl font-semibold mb-2">Watering</h2>
             <p>{fruits.water}</p>
           </div>
           <button
-          onClick={handelQuery}
-          className="text-2xl sticky right-0 bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
-        >
-          {isOpen? "Close Query" : "Ask Query"}
-        </button>
-        {isOpen && <Query />}
+            onClick={handelQuery}
+            className="text-2xl sticky right-0 bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
+          >
+            {isOpen ? "Close Query" : "Ask Query"}
+          </button>
+          {isOpen && <Query />}
         </div>
-        <Footer/>
+        <Footer />
       </div>
     </div>
   );
