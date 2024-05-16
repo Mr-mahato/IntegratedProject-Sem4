@@ -5,12 +5,11 @@ const app = express();
 const fs = require("fs");
 const bodyParser = require("body-parser");
 const port = 3500;
-const path=require('path');
+const path = require("path");
 app.use(bodyParser.json());
 const { connectDb, dbName } = require("./DbConn");
 const { ObjectId } = require("mongodb");
 connectDb();
-
 
 // Access your API key as an environment variable (see "Set up your API key" above)
 const genAI = new GoogleGenerativeAI(process.env.API_URL);
@@ -57,7 +56,7 @@ app.post("/api/search", async (req, res) => {
       res.send(foundData); // Send found data as response
     } else {
       console.log("Data not found");
-      res.send({status:false}); // Send response indicating data not found
+      res.send({ status: false }); // Send response indicating data not found
     }
   } catch (err) {
     console.error("Error occurred:", err);
@@ -65,18 +64,35 @@ app.post("/api/search", async (req, res) => {
   }
 });
 
-app.post("/api/signup", (req, res) => {
-  const userData = req.body;
-  userData.role ? 2 : (userData.role = 0);
-  fs.readFile("user.json", "utf-8", (err, data) => {
-    if (err) res.send({ status: false });
-    data = JSON.parse(data);
-    data.push(userData);
-    fs.writeFile("user.json", JSON.stringify(data), (err) => {
-      if (err) res.send({ status: false });
+app.post("/api/signup", async (req, res) => {
+  try {
+    let { username, email, password, role } = req.body;
+    role = role ? 2 : 0;
+    // Input validation
+    if (!username || !email || !password) {
+      return res.status(400).json({ message: "All fields are required" });
+    }
+
+    const existingUser = await dbName.collection("user").findOne({ email });
+
+    // Check if user already exists
+    if (existingUser) {
+      return res.status(400).json({ status: false });
+    }
+
+    const user = await dbName
+      .collection("user")
+      .insertOne({ email, username, password, role });
+
+    if (user) {
       res.send({ status: true });
-    });
-  });
+    } else {
+      res.send({ status: false });
+    }
+  } catch (error) {
+    console.error(error);
+    return res.status(500).json({ message: "Internal Server Error" });
+  }
 });
 
 app.get("/api/moderator", (req, res) => {
@@ -100,19 +116,28 @@ app.delete("/api/deleteMod/:email", (req, res) => {
   });
 });
 
-const file=path.join(__dirname,"/user.json");
-app.post("/api/login", (req, res) => {
-  const userData = req.body;
-  fs.readFile(file, "utf-8", (err, data) => {
-    if (err) res.send({ status: false });
-    data = JSON.parse(data);
-    const user = data.find((val) => val.email == userData.email);
-    if (user) {
-      res.send({ status: true, username: user.username, role: user.role });
-    } else {
-      res.send({ status: false });
+const file = path.join(__dirname, "/user.json");
+
+app.post("/api/login", async(req, res) => {
+  try {
+    const { email, password } = req.body;
+
+    // Input validation
+    if (!email || !password) {
+      return res.status(400).json({ message: "All fields are required" });
     }
-  });
+
+    const user = await dbName.collection('user').findOne({ email });
+
+    // Check if user exists
+    if (!user) {
+      return res.status(401).json({ message: "User not found" });
+    }
+    res.send({ status: true, username: user.username, role: user.role });
+  } catch (error) {
+    console.error(error);
+    return res.status(500).json({ message: "Internal Server Error" });
+  }
 });
 
 // here i am sending the query data to the Admin and the moderator to client
@@ -158,7 +183,6 @@ app.post("/api/query", (req, res) => {
   });
 });
 
-
 //Vegetable Section
 app.get("/api/summerVegetable", (req, res) => {
   dbName
@@ -191,7 +215,6 @@ app.get("/api/rainyVegetable", (req, res) => {
     .catch((err) => console.log("err"));
 });
 
-
 //Finding the vegetable in the collection
 app.get("/api/vegetable/:id", (req, res) => {
   const { id } = req.params;
@@ -204,16 +227,16 @@ app.get("/api/vegetable/:id", (req, res) => {
       console.log(id);
       if (val) res.send(val);
       else console.log("not found");
-    })
-    dbName
+    });
+  dbName
     .collection("wintervegetable")
     .findOne({ _id: o_id })
     .then((val) => {
       console.log(id);
       if (val) res.send(val);
       else console.log("not found");
-    })
-    dbName
+    });
+  dbName
     .collection("Rainyvegetable")
     .findOne({ _id: o_id })
     .then((val) => {
@@ -225,7 +248,6 @@ app.get("/api/vegetable/:id", (req, res) => {
       res.send(err);
     });
 });
-
 
 //Fruit Section
 app.get("/api/summerFruit", (req, res) => {
@@ -271,16 +293,16 @@ app.get("/api/fruit/:id", (req, res) => {
       console.log(id);
       if (val) res.send(val);
       else console.log("not found");
-    })
-    dbName
+    });
+  dbName
     .collection("winterfruits")
     .findOne({ _id: o_id })
     .then((val) => {
       console.log(id);
       if (val) res.send(val);
       else console.log("not found");
-    })
-    dbName
+    });
+  dbName
     .collection("Rainyfruits")
     .findOne({ _id: o_id })
     .then((val) => {
@@ -293,8 +315,7 @@ app.get("/api/fruit/:id", (req, res) => {
     });
 });
 
-
-//Flower Section 
+//Flower Section
 app.get("/api/flower", (req, res) => {
   dbName
     .collection("Flower")
@@ -326,7 +347,6 @@ app.get("/api/rainyFlower", (req, res) => {
     .catch((err) => console.log("err"));
 });
 
-
 //Flower finding in the collection
 app.get("/api/flower/:id", (req, res) => {
   const { id } = req.params;
@@ -339,16 +359,16 @@ app.get("/api/flower/:id", (req, res) => {
       console.log(id);
       if (val) res.send(val);
       else console.log("not found");
-    })
-    dbName
+    });
+  dbName
     .collection("winterflowers")
     .findOne({ _id: o_id })
     .then((val) => {
       console.log(id);
       if (val) res.send(val);
       else console.log("not found");
-    })
-    dbName
+    });
+  dbName
     .collection("Rainyflower")
     .findOne({ _id: o_id })
     .then((val) => {
